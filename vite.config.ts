@@ -3,10 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// base は相対指定。GitHub Pages のサブパス（例 /repo-name/）配信でも、
-// リポジトリ名が変わっても壊れない。独自ドメイン/ルート配信なら '/' に変更可。
+// base は Vercel（ルートドメイン配信）向けに '/' を指定。
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [
     react(),
     tailwindcss(),

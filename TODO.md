@@ -38,4 +38,4 @@
 
 - 料金・時刻・規制（火口閉鎖、フェリー欠航、協力金額）は**変動**。出発が近づいたら `src/data/*` を最新値に更新する。
 - 阿蘇・中岳火口は 2026/6 時点で見学閉鎖中。再開したら `src/data/trip.ts` の Day1 バッジ/メモを更新。
-- デプロイは `main` push → GitHub Actions（`.github/workflows/deploy.yml`）。`base: './'` のためリポジトリ名変更の影響なし。
+- デプロイは `main` ブランチへ push すると Vercel が自動でビルド＆デプロイを実行します。
