@@ -1,6 +1,6 @@
-import { Icon } from './Icon'
+import { Icon, type IconName } from './Icon'
 
-export function SectionHeading({ icon, title, sub }: { icon: string; title: string; sub?: string }) {
+export function SectionHeading({ icon, title, sub }: { icon: IconName; title: string; sub?: string }) {
   return (
     <div className="flex items-center gap-3 mb-5">
       <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-100 text-brand-600 shrink-0">

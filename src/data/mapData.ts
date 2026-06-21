@@ -101,3 +101,12 @@ export const routeSegments: RouteSegment[] = [
     ],
   },
 ]
+
+if (import.meta.env.DEV) {
+  const orders = mapPoints.map((p) => p.order).sort((a, b) => a - b)
+  for (let i = 0; i < orders.length; i++) {
+    if (orders[i] !== i + 1) {
+      console.warn(`[mapData] Missing or duplicate order detected: expected ${i + 1}, found ${orders[i]}`)
+    }
+  }
+}

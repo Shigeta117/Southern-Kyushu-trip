@@ -24,7 +24,7 @@ export function BottomNav({ active, onJump }: { active: string; onJump: (id: str
               onClick={() => onJump(t.id)}
               aria-current={on ? 'true' : undefined}
               className={`flex flex-col items-center justify-center gap-0.5 py-2 transition-colors ${
-                on ? 'text-brand-600' : 'text-slate-400'
+                on ? 'text-brand-600' : 'text-slate-500'
               }`}
             >
               <Icon name={t.icon} className="w-5 h-5" />

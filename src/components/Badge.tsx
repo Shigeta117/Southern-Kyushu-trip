@@ -1,7 +1,7 @@
 import type { Badge as BadgeType, BadgeKind } from '../data/types'
-import { Icon } from './Icon'
+import { Icon, type IconName } from './Icon'
 
-const style: Record<BadgeKind, { cls: string; icon: string }> = {
+const style: Record<BadgeKind, { cls: string; icon: IconName }> = {
   food: { cls: 'bg-orange-50 text-orange-700 border-orange-200', icon: 'utensils' },
   reserve: { cls: 'bg-violet-50 text-violet-700 border-violet-200', icon: 'ticket' },
   warn: { cls: 'bg-rose-50 text-rose-700 border-rose-200', icon: 'warn' },

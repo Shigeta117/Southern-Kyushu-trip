@@ -38,10 +38,9 @@ import {
   CircleHelp,
   Utensils,
   Anchor,
-  type LucideIcon,
 } from 'lucide-react'
 
-const iconMap: Record<string, LucideIcon> = {
+const iconMap = {
   users: Users,
   mountain: Mountain,
   waves: Waves,
@@ -82,8 +81,10 @@ const iconMap: Record<string, LucideIcon> = {
   anchor: Anchor,
 }
 
+export type IconName = keyof typeof iconMap
+
 export interface IconProps {
-  name: string
+  name: IconName
   className?: string
 }
 

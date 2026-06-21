@@ -1,8 +1,9 @@
 import type { LinkItem } from './types'
+import type { IconName } from '../components/Icon'
 
 export interface TransportCard {
   id: string
-  icon: string
+  icon: IconName
   title: string
   lead?: string
   rows: { label: string; value: string }[]

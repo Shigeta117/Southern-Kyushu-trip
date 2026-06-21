@@ -1,4 +1,5 @@
 // アプリ全体で使う型定義（外部データではなく静的データだが、型で一貫性を担保）
+import type { IconName } from '../components/Icon'
 
 export type Confidence = 'high' | 'medium' | 'low'
 
@@ -27,7 +28,7 @@ export interface Spot {
   time?: string
   title: string
   /** Icon コンポーネントのキー（src/components/Icon.tsx の iconMap 参照） */
-  icon: string
+  icon: IconName
   lead?: string
   places?: Place[]
   badges?: Badge[]
@@ -87,7 +88,7 @@ export interface PackingItem {
 export interface PackingGroup {
   id: string
   title: string
-  icon: string
+  icon: IconName
   items: PackingItem[]
 }
 
@@ -97,7 +98,7 @@ export interface LinkItem {
 }
 
 export interface Hazard {
-  icon: string
+  icon: IconName
   title: string
   body: string
 }

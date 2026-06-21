@@ -5,18 +5,18 @@
 
 ---
 
-## 1. コード品質（code-reviewer 指摘の未対応分）
+## 1. コード品質（code-reviewer 指摘）
 
-| 重大度 | 項目 | 内容 | 対象ファイル |
-|---|---|---|---|
-| MEDIUM | Leaflet 再初期化の理論リスク | StrictMode 下では動作確認済みだが、環境次第で「Map container is already initialized」が出る可能性。`container._leaflet_id` のクリアや `key` での明示破棄を検討 | `src/components/TripMap.tsx` |
-| LOW | 再描画 effect の依存配列 | `mapPoints` / `routeSegments` を依存に含めていない（現状は定数で実害なし）。データを動的化する際に追加が必要 | `src/components/TripMap.tsx` |
-| LOW | テキストのコントラスト | `text-slate-400` 等が WCAG AA 境界。地図下キャプションやリセット文言を `slate-500` 以上へ | 各コンポーネント / `src/index.css` |
-| LOW | `mapData` の order 検証 | マーカー番号 `order` の重複・欠番を防ぐ開発時アサーションが無い | `src/data/mapData.ts` |
-| LOW | Icon の name 型安全 | `Icon` の `name: string` がフリーテキストで、タイプミスを実行時に握る（`CircleHelp` 表示）。`keyof typeof iconMap` のユニオン型にして compile time で検出 | `src/components/Icon.tsx`, 利用側 |
-| LOW | 下部タブのジャンプ非対称 | `持ち物`/`緊急` 表示中は「情報」をハイライトするが、タブを押すと `移動・予約` 先頭へ戻る。サブナビ追加 or 仕様として許容 | `src/components/BottomNav.tsx`, `src/App.tsx` |
-
-> 対応済み（参考）: AppBar のタップ領域 40px 化 / 持ち物チェックの安定ID化 / アコーディオンの `aria-controls` / `seg2color`→`dayToColor` 改名。
+> **すべて対応済み**
+> 
+> 対応履歴:
+> - Leaflet 再初期化のクリア処理追加 (`container._leaflet_id` 削除)
+> - TripMap effect 依存配列の修正 (`mapPoints`, `routeSegments` 追加)
+> - テキストコントラスト改善 (`text-slate-400` を `500` へ引き上げ: WCAG AA対応)
+> - `mapData` の `order` 重複検証 (dev時) を追加
+> - `Icon` の `name` を `keyof typeof iconMap` で型安全化
+> - （下部タブのジャンプ非対称については仕様として許容）
+> - 以前の対応: AppBar のタップ領域 40px 化 / 持ち物チェックの安定ID化 / アコーディオンの `aria-controls` / `seg2color`→`dayToColor` 改名。
 
 ---
 

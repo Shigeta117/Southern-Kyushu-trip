@@ -51,7 +51,7 @@ export default function App() {
         <Emergency />
       </main>
 
-      <footer className="max-w-3xl mx-auto px-4 pb-24 pt-2 text-center text-xs text-slate-400 leading-relaxed">
+      <footer className="max-w-3xl mx-auto px-4 pb-24 pt-2 text-center text-xs text-slate-500 leading-relaxed">
         料金・時刻・規制は変動します。出発前に各公式で最新情報をご確認ください。
         <br />
         南九州＆屋久島 3泊4日 旅のしおり

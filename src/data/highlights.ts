@@ -1,5 +1,7 @@
+import type { IconName } from '../components/Icon'
+
 export interface Highlight {
-  icon: string
+  icon: IconName
   color: string
   bg: string
   title: string

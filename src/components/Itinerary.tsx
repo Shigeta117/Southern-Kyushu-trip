@@ -26,7 +26,7 @@ function DayCard({ day, open, onToggle }: { day: Day; open: boolean; onToggle: (
         </span>
         <Icon
           name="chevron"
-          className={`w-5 h-5 text-slate-400 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-slate-500 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
         />
       </button>
 

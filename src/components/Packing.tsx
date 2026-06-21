@@ -22,7 +22,7 @@ export function Packing() {
           <span className="text-sm font-bold text-slate-600">
             {doneCount} / {allKeys.length} 完了
           </span>
-          <button type="button" onClick={reset} className="text-xs text-slate-400 underline active:text-slate-600">
+          <button type="button" onClick={reset} className="text-xs text-slate-500 underline active:text-slate-600">
             リセット
           </button>
         </div>
@@ -50,7 +50,7 @@ export function Packing() {
                         onChange={() => toggle(item.id)}
                         className="mt-0.5 w-5 h-5 rounded accent-brand-600 shrink-0"
                       />
-                      <span className={`text-sm leading-relaxed ${on ? 'line-through text-slate-400' : 'text-slate-700'}`}>
+                      <span className={`text-sm leading-relaxed ${on ? 'line-through text-slate-500' : 'text-slate-700'}`}>
                         {item.label}
                       </span>
                     </label>

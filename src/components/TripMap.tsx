@@ -53,6 +53,9 @@ export function TripMap() {
     mapRef.current = map
     return () => {
       map.remove()
+      if (containerRef.current) {
+        delete (containerRef.current as any)._leaflet_id
+      }
       mapRef.current = null
       layerRef.current = null
     }
@@ -95,7 +98,7 @@ export function TripMap() {
       const bounds = L.latLngBounds(points.map((p) => [p.coord.lat, p.coord.lng] as [number, number]))
       map.fitBounds(bounds, { padding: [40, 40], maxZoom: filter === 0 ? 8 : 12 })
     }
-  }, [filter])
+  }, [filter, mapPoints, routeSegments])
 
   return (
     <section id="map" className="section-anchor">
@@ -122,7 +125,7 @@ export function TripMap() {
       <div className="bg-white p-2 rounded-2xl shadow-sm border border-slate-200">
         <div ref={containerRef} className="h-[55vh] min-h-[320px] max-h-[480px] w-full rounded-xl overflow-hidden" />
       </div>
-      <p className="text-xs text-slate-400 mt-2">
+      <p className="text-xs text-slate-500 mt-2">
         ピンをタップ → 「経路案内」でGoogleマップが開きます。一度表示した地図はオフラインでも再表示できます。
       </p>
     </section>
