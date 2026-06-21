@@ -1,0 +1,742 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: 南九州＆屋久島
+      - generic [ref=e7]:
+        - button "D1：熊本 → 阿蘇 → 高千穂へ移動" [ref=e8]: D1
+        - button "D2：高千穂 → 霧島 → 桜島 → 鹿児島へ移動" [ref=e9]: D2
+        - button "D3：鹿児島 → 屋久島へ移動" [ref=e10]: D3
+        - button "D4：屋久島一周 → 解散へ移動" [ref=e11]: D4
+  - banner [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]: 限界突破！夏のフルスロットルプラン
+      - heading "南九州＆屋久島 3泊4日 ロードマップ" [level=1] [ref=e16]:
+        - text: 南九州＆屋久島
+        - text: 3泊4日 ロードマップ
+      - generic [ref=e17]:
+        - img [ref=e18]
+        - text: 夏（6〜8月）想定
+      - paragraph [ref=e24]: 阿蘇の草原、高千穂の渓谷、霧島の神話、桜島の活火山、そして屋久島の原生林。毎日まったく違う絶景に出会う周遊ルート。
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - definition [ref=e27]: 3泊4日
+          - term [ref=e28]: 日程
+        - generic [ref=e29]:
+          - definition [ref=e30]: 3県＋離島
+          - term [ref=e31]: エリア
+        - generic [ref=e32]:
+          - definition [ref=e33]: 車・船・高速船
+          - term [ref=e34]: 移動
+  - main [ref=e35]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - img [ref=e39]
+        - generic [ref=e41]:
+          - heading "3県制覇＋離島" [level=3] [ref=e42]
+          - paragraph [ref=e43]: 熊本・宮崎・鹿児島の南九州3県を縦断し、高速船で世界遺産・屋久島へ。ほぼ直線の動線。
+      - generic [ref=e44]:
+        - img [ref=e46]
+        - generic [ref=e49]:
+          - heading "毎日変わる絶景" [level=3] [ref=e50]
+          - paragraph [ref=e51]: 草原、渓谷、温泉、活火山、苔むす森、海。シャッターを切り続けたくなる多彩な被写体。
+      - generic [ref=e52]:
+        - img [ref=e54]
+        - generic [ref=e57]:
+          - heading "多彩なアクティビティ" [level=3] [ref=e58]
+          - paragraph [ref=e59]: 絶景ドライブ、神社巡り、ボート、トレッキング、温泉、ご当地グルメをすべて網羅。
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - img [ref=e63]
+        - generic [ref=e65]:
+          - heading "ツアースケジュール" [level=2] [ref=e66]
+          - paragraph [ref=e67]: タップで各日を開閉
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - button "D1 熊本 → 阿蘇 → 高千穂 草原と火山から、神話の渓谷へ" [expanded] [ref=e70]:
+            - generic [ref=e71]: D1
+            - generic [ref=e72]:
+              - generic [ref=e73]: 熊本 → 阿蘇 → 高千穂
+              - generic [ref=e74]: 草原と火山から、神話の渓谷へ
+            - img [ref=e75]
+          - generic [ref=e77]:
+            - generic [ref=e79]:
+              - img [ref=e81]
+              - generic [ref=e86]:
+                - generic [ref=e87]: 10:00
+                - heading "熊本 集合・出発" [level=4] [ref=e88]
+                - paragraph [ref=e89]: 熊本空港または熊本駅に集合。🚗 1台目のレンタカーを配車して出発！
+                - list [ref=e90]:
+                  - listitem [ref=e91]:
+                    - img [ref=e93]
+                    - generic [ref=e97]: 熊本駅
+                    - link "熊本駅 を地図で開く" [ref=e98] [cursor=pointer]:
+                      - /url: https://www.google.com/maps/search/?api=1&query=32.7895,130.6884
+                      - img [ref=e99]
+                      - text: 地図
+                - generic [ref=e102]:
+                  - img [ref=e103]
+                  - generic [ref=e105]: レンタカー①は事前予約（乗り捨て可否も確認）
+            - generic [ref=e107]:
+              - img [ref=e109]
+              - generic [ref=e111]:
+                - generic [ref=e112]: 11:30
+                - heading "阿蘇エリア" [level=4] [ref=e113]
+                - paragraph [ref=e114]: 草原と火山のドライブ。
+                - list [ref=e115]:
+                  - listitem [ref=e116]:
+                    - img [ref=e118]
+                    - generic [ref=e121]:
+                      - generic [ref=e122]: 草千里ヶ浜
+                      - generic [ref=e123]: 大草原と火口湖、放牧の馬
+                    - link "草千里ヶ浜 を地図で開く" [ref=e124] [cursor=pointer]:
+                      - /url: https://www.google.com/maps/search/?api=1&query=32.8829,131.056
+                      - img [ref=e125]
+                      - text: 地図
+                  - listitem [ref=e127]:
+                    - img [ref=e129]
+                    - generic [ref=e132]:
+                      - generic [ref=e133]: 大観峰
+                      - generic [ref=e134]: 阿蘇五岳とカルデラの大展望
+                    - link "大観峰 を地図で開く" [ref=e135] [cursor=pointer]:
+                      - /url: https://www.google.com/maps/search/?api=1&query=32.9709,131.1078
+                      - img [ref=e136]
+                      - text: 地図
+                  - listitem [ref=e138]:
+                    - img [ref=e140]
+                    - generic [ref=e143]:
+                      - generic [ref=e144]: 中岳火口
+                      - generic [ref=e145]: ※2026年6月時点 見学閉鎖中。当日の規制を要確認
+                    - link "中岳火口 を地図で開く" [ref=e146] [cursor=pointer]:
+                      - /url: https://www.google.com/maps/search/?api=1&query=32.8847,131.0848
+                      - img [ref=e147]
+                      - text: 地図
+                - generic [ref=e149]:
+                  - generic [ref=e150]:
+                    - img [ref=e151]
+                    - generic [ref=e154]: 昼食：あか牛丼
+                  - generic [ref=e155]:
+                    - img [ref=e156]
+                    - generic [ref=e158]: 中岳火口は閉鎖中の可能性大 → 草千里・大観峰を中心に
+                - generic [ref=e159]:
+                  - img [ref=e160]
+                  - generic [ref=e162]: 夏の草原は遮るものなし。帽子・日焼け止め・水分を。火口規制は aso-volcano.jp で当日必ず確認。
+            - generic [ref=e164]:
+              - img [ref=e166]
+              - generic [ref=e170]:
+                - generic [ref=e171]: 16:00
+                - heading "高千穂峡" [level=4] [ref=e172]
+                - paragraph [ref=e173]: 阿蘇から約1.5時間のドライブ。柱状節理の渓谷と真名井の滝。
+                - list [ref=e174]:
+                  - listitem [ref=e175]:
+                    - img [ref=e177]
+                    - generic [ref=e181]: 高千穂峡（真名井の滝）
+                    - link "高千穂峡（真名井の滝） を地図で開く" [ref=e182] [cursor=pointer]:
+                      - /url: https://www.google.com/maps/search/?api=1&query=32.715,131.3034
+                      - img [ref=e183]
+                      - text: 地図
+                - generic [ref=e185]:
+                  - generic [ref=e186]:
+                    - img [ref=e187]
+                    - generic [ref=e189]: 貸しボートはネット予約制（2週間前〜2日前・電話不可）。夏は完全予約制
+                  - generic [ref=e190]:
+                    - img [ref=e191]
+                    - generic [ref=e193]: 増水・点検時は運休。当日朝に運航状況を確認
+                - generic [ref=e194]:
+                  - img [ref=e195]
+                  - generic [ref=e197]: ボートは1艇30分 平日4,100円／繁忙期5,100円（定員3名）。8月は予約必須。
+            - generic [ref=e199]:
+              - img [ref=e201]
+              - generic [ref=e203]:
+                - generic [ref=e204]: 夜
+                - heading "高千穂泊・高千穂神楽" [level=4] [ref=e205]
+                - paragraph [ref=e206]: 高千穂神社 神楽殿で毎晩20:00〜21:00の「高千穂神楽」を観覧（代表4番）。
+                - list [ref=e207]:
+                  - listitem [ref=e208]:
+                    - img [ref=e210]
+                    - generic [ref=e214]: 高千穂神社
+                    - link "高千穂神社 を地図で開く" [ref=e215] [cursor=pointer]:
+                      - /url: https://www.google.com/maps/search/?api=1&query=32.7083,131.3081
+                      - img [ref=e216]
+                      - text: 地図
+                - generic [ref=e219]:
+                  - img [ref=e220]
+                  - generic [ref=e222]: 観覧 約1,000円。オンライン予約枠あり（30日前〜）
+                - generic [ref=e223]:
+                  - img [ref=e224]
+                  - generic [ref=e226]: 集落の本格「夜神楽」は11月中旬〜2月。夏に観られるのは毎晩開催のこの神楽です。
+        - button "D2 高千穂 → 霧島 → 桜島 → 鹿児島 神話の山岳から活火山を抜け、海を渡る" [ref=e228]:
+          - generic [ref=e229]: D2
+          - generic [ref=e230]:
+            - generic [ref=e231]: 高千穂 → 霧島 → 桜島 → 鹿児島
+            - generic [ref=e232]: 神話の山岳から活火山を抜け、海を渡る
+          - img [ref=e233]
+        - button "D3 鹿児島 → 屋久島 いざ、世界遺産の苔むす森へ" [ref=e236]:
+          - generic [ref=e237]: D3
+          - generic [ref=e238]:
+            - generic [ref=e239]: 鹿児島 → 屋久島
+            - generic [ref=e240]: いざ、世界遺産の苔むす森へ
+          - img [ref=e241]
+        - button "D4 屋久島一周 → 解散 森と海を駆け抜け、それぞれの帰路へ" [ref=e244]:
+          - generic [ref=e245]: D4
+          - generic [ref=e246]:
+            - generic [ref=e247]: 屋久島一周 → 解散
+            - generic [ref=e248]: 森と海を駆け抜け、それぞれの帰路へ
+          - img [ref=e249]
+    - generic [ref=e251]:
+      - generic [ref=e252]:
+        - img [ref=e254]
+        - generic [ref=e258]:
+          - heading "ルートマップ" [level=2] [ref=e259]
+          - paragraph [ref=e260]: 日別フィルタ・ピンから経路案内へ
+      - generic [ref=e261]:
+        - button "全行程" [ref=e262]
+        - button "D1" [ref=e263]
+        - button "D2" [ref=e264]
+        - button "D3" [ref=e265]
+        - button "D4" [ref=e266]
+      - generic [ref=e268]:
+        - generic:
+          - generic:
+            - img
+          - generic:
+            - button "1" [ref=e275] [cursor=pointer]:
+              - generic [ref=e276]: "1"
+            - button "2" [ref=e277] [cursor=pointer]:
+              - generic [ref=e278]: "2"
+            - button "3" [ref=e279] [cursor=pointer]:
+              - generic [ref=e280]: "3"
+            - button "4" [ref=e281] [cursor=pointer]:
+              - generic [ref=e282]: "4"
+            - button "5" [ref=e283] [cursor=pointer]:
+              - generic [ref=e284]: "5"
+            - button "6" [ref=e285] [cursor=pointer]:
+              - generic [ref=e286]: "6"
+            - button "7" [ref=e287] [cursor=pointer]:
+              - generic [ref=e288]: "7"
+            - button "8" [ref=e289] [cursor=pointer]:
+              - generic [ref=e290]: "8"
+            - button "9" [ref=e291] [cursor=pointer]:
+              - generic [ref=e292]: "9"
+            - button "10" [ref=e293] [cursor=pointer]:
+              - generic [ref=e294]: "10"
+            - button "11" [ref=e295] [cursor=pointer]:
+              - generic [ref=e296]: "11"
+            - button "12" [ref=e297] [cursor=pointer]:
+              - generic [ref=e298]: "12"
+            - button "13" [ref=e299] [cursor=pointer]:
+              - generic [ref=e300]: "13"
+            - button "14" [ref=e301] [cursor=pointer]:
+              - generic [ref=e302]: "14"
+            - button "15" [ref=e303] [cursor=pointer]:
+              - generic [ref=e304]: "15"
+            - button "16" [ref=e305] [cursor=pointer]:
+              - generic [ref=e306]: "16"
+            - button "17" [ref=e307] [cursor=pointer]:
+              - generic [ref=e308]: "17"
+            - button "18" [ref=e309] [cursor=pointer]:
+              - generic [ref=e310]: "18"
+            - button "19" [ref=e311] [cursor=pointer]:
+              - generic [ref=e312]: "19"
+            - button "20" [ref=e313] [cursor=pointer]:
+              - generic [ref=e314]: "20"
+            - button "21" [ref=e315] [cursor=pointer]:
+              - generic [ref=e316]: "21"
+        - generic:
+          - generic [ref=e317]:
+            - button "Zoom in" [ref=e318] [cursor=pointer]: +
+            - button "Zoom out" [ref=e319] [cursor=pointer]: −
+          - generic [ref=e320]:
+            - link "Leaflet" [ref=e321] [cursor=pointer]:
+              - /url: https://leafletjs.com
+              - img [ref=e322]
+              - text: Leaflet
+            - text: "| ©"
+            - link "OpenStreetMap" [ref=e326] [cursor=pointer]:
+              - /url: https://www.openstreetmap.org/copyright
+            - text: ©
+            - link "CARTO" [ref=e327] [cursor=pointer]:
+              - /url: https://carto.com/attributions
+      - paragraph [ref=e328]: ピンをタップ → 「経路案内」でGoogleマップが開きます。一度表示した地図はオフラインでも再表示できます。
+    - generic [ref=e329]:
+      - generic [ref=e330]:
+        - img [ref=e332]
+        - generic [ref=e335]:
+          - heading "費用の目安" [level=2] [ref=e336]
+          - paragraph [ref=e337]: 1人あたり・4名割り・2026年夏想定
+      - generic [ref=e338]:
+        - button "東京 / 羽田" [ref=e339]
+        - button "大阪 / 伊丹" [ref=e340]
+        - button "京都 / 新幹線" [ref=e341]
+      - generic [ref=e342]:
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - generic [ref=e345]: 往復航空券（乗継）
+            - generic [ref=e346]: 羽田→熊本 ＋ 屋久島→鹿児島→羽田
+          - generic [ref=e347]: 30,000〜55,000円
+        - list [ref=e348]:
+          - listitem [ref=e349]:
+            - generic [ref=e350]:
+              - generic [ref=e351]: 高速船（往路片道）
+              - generic [ref=e352]: 往復なら25,900円
+            - generic [ref=e353]: 約14,000円
+          - listitem [ref=e354]:
+            - generic [ref=e355]:
+              - generic [ref=e356]: レンタカー2台（4名割り）
+              - generic [ref=e357]: 乗り捨て料金込み
+            - generic [ref=e358]: 7,500〜12,500円
+          - listitem [ref=e359]:
+            - generic [ref=e360]:
+              - generic [ref=e361]: 桜島フェリー（車載・割り勘）
+              - generic [ref=e362]: 誤差範囲
+            - generic [ref=e363]: 約500円
+          - listitem [ref=e364]:
+            - generic [ref=e365]:
+              - generic [ref=e366]: 宿泊3泊
+              - generic [ref=e367]: 高千穂/鹿児島/屋久島
+            - generic [ref=e368]: 21,000〜45,000円
+          - listitem [ref=e369]:
+            - generic [ref=e370]:
+              - generic [ref=e371]: 食事（4日）
+              - generic [ref=e372]: 1日4,000〜8,000円
+            - generic [ref=e373]: 16,000〜32,000円
+          - listitem [ref=e374]:
+            - generic [ref=e375]:
+              - generic [ref=e376]: 観光・協力金
+              - generic [ref=e377]: ボート/神楽/白谷500円 等
+            - generic [ref=e378]: 6,000〜14,000円
+          - listitem [ref=e379]:
+            - generic [ref=e380]:
+              - generic [ref=e381]: ガソリン・高速・予備
+              - generic [ref=e382]: 4名割り
+            - generic [ref=e383]: 2,000〜4,000円
+        - generic [ref=e384]:
+          - generic [ref=e385]: 合計の目安（東京 / 羽田）
+          - generic [ref=e386]: 約 130,000〜215,000円
+      - generic [ref=e387]:
+        - img [ref=e388]
+        - paragraph [ref=e390]: すべて「目安」です（4名で割り勘・2026年夏想定）。料金は変動するため、必ず各公式で最新を確認してください。お盆ピーク（8/10〜18頃）は航空券・宿が +20〜60% 上振れします。早割・早期予約で大きく圧縮できます。
+    - generic [ref=e391]:
+      - generic [ref=e392]:
+        - img [ref=e394]
+        - generic [ref=e398]:
+          - heading "移動・予約" [level=2] [ref=e399]
+          - paragraph [ref=e400]: 料金・時刻は目安。出発前に公式で確認を
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - generic [ref=e403]:
+            - img [ref=e404]
+            - heading "レンタカー戦略（重要）" [level=3] [ref=e407]
+          - paragraph [ref=e408]: 海を渡るため、レンタカーは「2回」に分けて借ります。
+          - generic [ref=e409]:
+            - generic [ref=e410]:
+              - term [ref=e411]: 🚗 1台目（九州本土）
+              - definition [ref=e412]: 1日目午前 熊本空港/駅 → 2日目夕方 鹿児島市内で返却
+            - generic [ref=e413]:
+              - term [ref=e414]: 🚙 2台目（屋久島）
+              - definition [ref=e415]: 3日目午前 屋久島の港 → 4日目午後 屋久島空港で返却
+            - generic [ref=e416]:
+              - term [ref=e417]: 乗り捨て料金の目安
+              - definition [ref=e418]: 熊本→鹿児島は 約13,000〜22,000円（鹿児島空港返却が最安傾向）
+          - list [ref=e419]:
+            - listitem [ref=e420]:
+              - img [ref=e421]
+              - generic [ref=e423]: 県外ワンウェイ（乗り捨て）は有料。会社・車種・営業所で可否と料金が変わるため事前確認を。
+            - listitem [ref=e424]:
+              - img [ref=e425]
+              - generic [ref=e427]: 夏の繁忙期（特にお盆）は在庫が逼迫。早期予約必須。
+          - generic [ref=e428]:
+            - link "トヨタ ワンウェイ料金シミュレーション" [ref=e429] [cursor=pointer]:
+              - /url: https://rent.toyota.co.jp/service/service_option/oneway/simulation.aspx
+              - img [ref=e430]
+              - generic [ref=e434]: トヨタ ワンウェイ料金シミュレーション
+            - link "オリックス南九州 ワンウェイ料金" [ref=e435] [cursor=pointer]:
+              - /url: https://mrl.iwasaki-group.com/oneway.html
+              - img [ref=e436]
+              - generic [ref=e440]: オリックス南九州 ワンウェイ料金
+            - link "まつばんだレンタカー（屋久島）" [ref=e441] [cursor=pointer]:
+              - /url: https://yakushima.co.jp/car_rental/
+              - img [ref=e442]
+              - generic [ref=e446]: まつばんだレンタカー（屋久島）
+        - generic [ref=e447]:
+          - generic [ref=e448]:
+            - img [ref=e449]
+            - heading "高速船 トッピー＆ロケット（鹿児島⇔屋久島）" [level=3] [ref=e453]
+          - generic [ref=e454]:
+            - generic [ref=e455]:
+              - term [ref=e456]: 所要
+              - definition [ref=e457]: 直行 約1時間50分（寄港便は約2.5〜2.8h）
+            - generic [ref=e458]:
+              - term [ref=e459]: 運賃
+              - definition [ref=e460]: 片道 約14,000円／往復割引 25,900円（7日間有効）
+            - generic [ref=e461]:
+              - term [ref=e462]: 本数
+              - definition [ref=e463]: 夏ダイヤ 1日5便程度
+            - generic [ref=e464]:
+              - term [ref=e465]: 予約
+              - definition [ref=e466]: 乗船2ヶ月前〜前日。夏は早めに
+          - list [ref=e467]:
+            - listitem [ref=e468]:
+              - img [ref=e469]
+              - generic [ref=e471]: 台風時は欠航リスクあり。運航最終決定は出港1時間前が目安。毎朝、運航状況を確認。
+          - generic [ref=e472]:
+            - link "運賃・時刻表" [ref=e473] [cursor=pointer]:
+              - /url: https://www.tykousoku.jp/fare_time/
+              - img [ref=e474]
+              - generic [ref=e478]: 運賃・時刻表
+            - link "乗船予約" [ref=e479] [cursor=pointer]:
+              - /url: https://www.tykousoku.jp/reserve/
+              - img [ref=e480]
+              - generic [ref=e484]: 乗船予約
+            - link "運航状況" [ref=e485] [cursor=pointer]:
+              - /url: https://www.tykousoku.jp/etc/operation.php
+              - img [ref=e486]
+              - generic [ref=e490]: 運航状況
+        - generic [ref=e491]:
+          - generic [ref=e492]:
+            - img [ref=e493]
+            - heading "桜島フェリー（桜島⇔鹿児島市）" [level=3] [ref=e497]
+          - generic [ref=e498]:
+            - generic [ref=e499]:
+              - term [ref=e500]: 所要
+              - definition [ref=e501]: 約15分（約3.5km）
+            - generic [ref=e502]:
+              - term [ref=e503]: 旅客
+              - definition [ref=e504]: 大人250円 / 小児130円
+            - generic [ref=e505]:
+              - term [ref=e506]: 車両航送
+              - definition [ref=e507]: 4m未満1,700円 / 5m未満2,350円（運転手1名込）
+            - generic [ref=e508]:
+              - term [ref=e509]: 運航
+              - definition [ref=e510]: 4:00〜23:30・予約不要（2025年10月に24時間運航は廃止）
+          - list [ref=e511]:
+            - listitem [ref=e512]:
+              - img [ref=e513]
+              - generic [ref=e515]: 支払いは現金・クレジット・交通系IC・電子マネー対応。
+          - generic [ref=e516]:
+            - link "運賃（鹿児島市）" [ref=e517] [cursor=pointer]:
+              - /url: https://www.city.kagoshima.lg.jp/sakurajima-ferry/unchin/unchin.html
+              - img [ref=e518]
+              - generic [ref=e522]: 運賃（鹿児島市）
+            - link "運航状況" [ref=e523] [cursor=pointer]:
+              - /url: https://www.city.kagoshima.lg.jp/sakurajima-ferry/unko_jokyo/unkojyokyo.html
+              - img [ref=e524]
+              - generic [ref=e528]: 運航状況
+        - generic [ref=e529]:
+          - generic [ref=e530]:
+            - img [ref=e531]
+            - heading "高千穂峡 貸しボート（要予約）" [level=3] [ref=e533]
+          - generic [ref=e534]:
+            - generic [ref=e535]:
+              - term [ref=e536]: 料金
+              - definition [ref=e537]: 1艇30分 平日4,100円／繁忙期5,100円（定員3名）
+            - generic [ref=e538]:
+              - term [ref=e539]: 予約
+              - definition [ref=e540]: ネット予約制（2週間前9:00〜2日前9:00）・電話不可
+          - list [ref=e541]:
+            - listitem [ref=e542]:
+              - img [ref=e543]
+              - generic [ref=e545]: 8月は完全予約制で当日券なしの日も。増水・点検（1/4/7/10月）・地震時は運休。
+          - generic [ref=e546]:
+            - link "貸しボート予約サイト" [ref=e547] [cursor=pointer]:
+              - /url: https://eipro.jp/takachiho1/
+              - img [ref=e548]
+              - generic [ref=e552]: 貸しボート予約サイト
+            - link "高千穂峡（観光協会）" [ref=e553] [cursor=pointer]:
+              - /url: https://takachiho-kanko.info/boat/detail.php
+              - img [ref=e554]
+              - generic [ref=e558]: 高千穂峡（観光協会）
+      - generic [ref=e559]:
+        - generic [ref=e560]:
+          - img [ref=e561]
+          - heading "各地からのアクセス" [level=3] [ref=e563]
+        - paragraph [ref=e564]: 集合：1日目 10:00 ／ 解散：4日目 14:00以降
+        - generic [ref=e565]:
+          - generic [ref=e566]:
+            - generic [ref=e567]: ■ 東京メンバー
+            - paragraph [ref=e568]:
+              - strong [ref=e569]: 行：
+              - text: 羽田 ➡ 熊本空港（早朝便）
+              - strong [ref=e570]: 帰：
+              - text: 屋久島空港 ➡ 鹿児島空港（乗継）➡ 羽田
+          - generic [ref=e571]:
+            - generic [ref=e572]: ■ 大阪メンバー
+            - paragraph [ref=e573]:
+              - strong [ref=e574]: 行：
+              - text: 伊丹 ➡ 熊本空港 または 新幹線で熊本駅
+              - strong [ref=e575]: 帰：
+              - text: 屋久島空港 ➡ 伊丹空港（直行便あり！）
+            - paragraph [ref=e576]: 💡 屋久島→伊丹の直行便が使えるので乗継リスクが低い。
+          - generic [ref=e577]:
+            - generic [ref=e578]: ■ 京都メンバー
+            - paragraph [ref=e579]:
+              - strong [ref=e580]: 行：
+              - text: 京都駅 ➡ 熊本駅（新幹線 さくら/みずほ）
+              - strong [ref=e581]: 帰：
+              - text: 屋久島 ➡ 伊丹（直行）➡ リムジンバス/新快速で京都
+    - generic [ref=e582]:
+      - generic [ref=e583]:
+        - img [ref=e585]
+        - generic [ref=e589]:
+          - heading "持ち物チェックリスト" [level=2] [ref=e590]
+          - paragraph [ref=e591]: チェックは自動保存（この端末）
+      - generic [ref=e593]:
+        - generic [ref=e594]: 0 / 27 完了
+        - button "リセット" [ref=e595]
+      - generic [ref=e597]:
+        - generic [ref=e598]:
+          - generic [ref=e599]:
+            - img [ref=e600]
+            - heading "屋久島トレッキング（必携）" [level=3] [ref=e602]
+          - list [ref=e603]:
+            - listitem [ref=e604]:
+              - generic [ref=e605] [cursor=pointer]:
+                - checkbox "登山用レインウェア 上下（透湿防水・傘は森で使えない）" [ref=e606]
+                - generic [ref=e607]: 登山用レインウェア 上下（透湿防水・傘は森で使えない）
+            - listitem [ref=e608]:
+              - generic [ref=e609] [cursor=pointer]:
+                - checkbox "防水ザック / ザックカバー" [ref=e610]
+                - generic [ref=e611]: 防水ザック / ザックカバー
+            - listitem [ref=e612]:
+              - generic [ref=e613] [cursor=pointer]:
+                - checkbox "トレッキングシューズ（防水）" [ref=e614]
+                - generic [ref=e615]: トレッキングシューズ（防水）
+            - listitem [ref=e616]:
+              - generic [ref=e617] [cursor=pointer]:
+                - checkbox "速乾インナー＋ミドルレイヤー" [ref=e618]
+                - generic [ref=e619]: 速乾インナー＋ミドルレイヤー
+            - listitem [ref=e620]:
+              - generic [ref=e621] [cursor=pointer]:
+                - checkbox "着替え一式（防水袋・ジップロックで二重防水）" [ref=e622]
+                - generic [ref=e623]: 着替え一式（防水袋・ジップロックで二重防水）
+            - listitem [ref=e624]:
+              - generic [ref=e625] [cursor=pointer]:
+                - checkbox "飲み物・行動食" [ref=e626]
+                - generic [ref=e627]: 飲み物・行動食
+            - listitem [ref=e628]:
+              - generic [ref=e629] [cursor=pointer]:
+                - checkbox "タオル / 帰りの乾いた着替え（車に常備）" [ref=e630]
+                - generic [ref=e631]: タオル / 帰りの乾いた着替え（車に常備）
+        - generic [ref=e632]:
+          - generic [ref=e633]:
+            - img [ref=e634]
+            - heading "夏の南九州 暑さ・日差し対策" [level=3] [ref=e640]
+          - list [ref=e641]:
+            - listitem [ref=e642]:
+              - generic [ref=e643] [cursor=pointer]:
+                - checkbox "帽子 / サングラス" [ref=e644]
+                - generic [ref=e645]: 帽子 / サングラス
+            - listitem [ref=e646]:
+              - generic [ref=e647] [cursor=pointer]:
+                - checkbox "日焼け止め（汗・水に強いもの）" [ref=e648]
+                - generic [ref=e649]: 日焼け止め（汗・水に強いもの）
+            - listitem [ref=e650]:
+              - generic [ref=e651] [cursor=pointer]:
+                - checkbox "経口補水液 / 塩分タブレット" [ref=e652]
+                - generic [ref=e653]: 経口補水液 / 塩分タブレット
+            - listitem [ref=e654]:
+              - generic [ref=e655] [cursor=pointer]:
+                - checkbox "虫除けスプレー" [ref=e656]
+                - generic [ref=e657]: 虫除けスプレー
+            - listitem [ref=e658]:
+              - generic [ref=e659] [cursor=pointer]:
+                - checkbox "薄手の長袖（日焼け・冷房対策）" [ref=e660]
+                - generic [ref=e661]: 薄手の長袖（日焼け・冷房対策）
+        - generic [ref=e662]:
+          - generic [ref=e663]:
+            - img [ref=e664]
+            - heading "桜島の降灰対策" [level=3] [ref=e668]
+          - list [ref=e669]:
+            - listitem [ref=e670]:
+              - generic [ref=e671] [cursor=pointer]:
+                - checkbox "マスク（できれば防塵）" [ref=e672]
+                - generic [ref=e673]: マスク（できれば防塵）
+            - listitem [ref=e674]:
+              - generic [ref=e675] [cursor=pointer]:
+                - checkbox "メガネ（コンタクトより安全）" [ref=e676]
+                - generic [ref=e677]: メガネ（コンタクトより安全）
+            - listitem [ref=e678]:
+              - generic [ref=e679] [cursor=pointer]:
+                - checkbox "ウェットティッシュ" [ref=e680]
+                - generic [ref=e681]: ウェットティッシュ
+            - listitem [ref=e682]:
+              - generic [ref=e683] [cursor=pointer]:
+                - checkbox "折りたたみ傘" [ref=e684]
+                - generic [ref=e685]: 折りたたみ傘
+        - generic [ref=e686]:
+          - generic [ref=e687]:
+            - img [ref=e688]
+            - heading "予約・書類・お金" [level=3] [ref=e690]
+          - list [ref=e691]:
+            - listitem [ref=e692]:
+              - generic [ref=e693] [cursor=pointer]:
+                - checkbox "運転免許証" [ref=e694]
+                - generic [ref=e695]: 運転免許証
+            - listitem [ref=e696]:
+              - generic [ref=e697] [cursor=pointer]:
+                - checkbox "レンタカー予約確認（①九州本土 / ②屋久島）" [ref=e698]
+                - generic [ref=e699]: レンタカー予約確認（①九州本土 / ②屋久島）
+            - listitem [ref=e700]:
+              - generic [ref=e701] [cursor=pointer]:
+                - checkbox "高速船の予約" [ref=e702]
+                - generic [ref=e703]: 高速船の予約
+            - listitem [ref=e704]:
+              - generic [ref=e705] [cursor=pointer]:
+                - checkbox "宿の予約確認（3泊）" [ref=e706]
+                - generic [ref=e707]: 宿の予約確認（3泊）
+            - listitem [ref=e708]:
+              - generic [ref=e709] [cursor=pointer]:
+                - checkbox "高千穂峡ボートの予約" [ref=e710]
+                - generic [ref=e711]: 高千穂峡ボートの予約
+            - listitem [ref=e712]:
+              - generic [ref=e713] [cursor=pointer]:
+                - checkbox "現金（屋久島はカード不可の店も多い）" [ref=e714]
+                - generic [ref=e715]: 現金（屋久島はカード不可の店も多い）
+        - generic [ref=e716]:
+          - generic [ref=e717]:
+            - img [ref=e718]
+            - heading "あると便利" [level=3] [ref=e720]
+          - list [ref=e721]:
+            - listitem [ref=e722]:
+              - generic [ref=e723] [cursor=pointer]:
+                - checkbox "酔い止め（高速船）" [ref=e724]
+                - generic [ref=e725]: 酔い止め（高速船）
+            - listitem [ref=e726]:
+              - generic [ref=e727] [cursor=pointer]:
+                - checkbox "常備薬" [ref=e728]
+                - generic [ref=e729]: 常備薬
+            - listitem [ref=e730]:
+              - generic [ref=e731] [cursor=pointer]:
+                - checkbox "モバイルバッテリー（防水）" [ref=e732]
+                - generic [ref=e733]: モバイルバッテリー（防水）
+            - listitem [ref=e734]:
+              - generic [ref=e735] [cursor=pointer]:
+                - checkbox "エコバッグ" [ref=e736]
+                - generic [ref=e737]: エコバッグ
+            - listitem [ref=e738]:
+              - generic [ref=e739] [cursor=pointer]:
+                - checkbox "充電ケーブル" [ref=e740]
+                - generic [ref=e741]: 充電ケーブル
+    - generic [ref=e742]:
+      - generic [ref=e743]:
+        - img [ref=e745]
+        - generic [ref=e747]:
+          - heading "緊急・実用情報" [level=2] [ref=e748]
+          - paragraph [ref=e749]: 夏の南九州＆屋久島で気をつけること
+      - generic [ref=e750]:
+        - link "110 警察（事件・事故）" [ref=e751] [cursor=pointer]:
+          - /url: tel:110
+          - generic [ref=e752]: "110"
+          - generic [ref=e753]: 警察（事件・事故）
+        - link "119 消防・救急・火災" [ref=e754] [cursor=pointer]:
+          - /url: tel:119
+          - generic [ref=e755]: "119"
+          - generic [ref=e756]: 消防・救急・火災
+        - link "118 海の事故・海難" [ref=e757] [cursor=pointer]:
+          - /url: tel:118
+          - generic [ref=e758]: "118"
+          - generic [ref=e759]: 海の事故・海難
+      - generic [ref=e760]:
+        - generic [ref=e761]:
+          - img [ref=e763]
+          - generic [ref=e765]:
+            - heading "屋久島の雨" [level=3] [ref=e766]
+            - paragraph [ref=e767]: 「月に35日雨が降る」多雨地帯。登山用レインウェア上下と荷物の完全防水が必須。雨でも苔むす森は最も美しい——“雨前提”で備える。
+        - generic [ref=e768]:
+          - img [ref=e770]
+          - generic [ref=e774]:
+            - heading "桜島の降灰" [level=3] [ref=e775]
+            - paragraph [ref=e776]: 風向き次第で降灰に遭う。マスク・帽子・サングラスで保護。運転時は視界悪化に注意（乾いた灰はワイパー前に散水）。MBC降灰予報で確認。
+        - generic [ref=e777]:
+          - img [ref=e779]
+          - generic [ref=e781]:
+            - heading "火山警戒レベル" [level=3] [ref=e782]
+            - paragraph [ref=e783]: 桜島は噴火警戒レベル3（入山規制・目安）が継続。阿蘇 中岳火口は2026年6月時点で見学閉鎖中。出発前・当日朝に気象庁と aso-volcano.jp で必ず確認。
+        - generic [ref=e784]:
+          - img [ref=e786]
+          - generic [ref=e788]:
+            - heading "熱中症" [level=3] [ref=e789]
+            - paragraph [ref=e790]: 高温多湿でWBGTが高い。こまめな水分・塩分、帽子、休憩を徹底。炎天下の車内放置は厳禁。熱中症警戒アラート（WBGT33以上）を確認。
+        - generic [ref=e791]:
+          - img [ref=e793]
+          - generic [ref=e797]:
+            - heading "台風・欠航" [level=3] [ref=e798]
+            - paragraph [ref=e799]: 7〜9月は台風で航空便・高速船・フェリーが欠航しうる。屋久島は予備日と代替交通、キャンセル規定の確認を。足止めに備え現金・常備薬も。
+      - generic [ref=e800]:
+        - generic [ref=e801]:
+          - img [ref=e802]
+          - heading "主要病院" [level=3] [ref=e805]
+        - list [ref=e806]:
+          - listitem [ref=e807]:
+            - generic [ref=e808]: 熊本（D1）：
+            - text: 熊本医療センター / 熊本大学病院
+            - generic [ref=e809]: 県内の救命救急センター。阿蘇は山間部で医療機関が少ない
+          - listitem [ref=e810]:
+            - generic [ref=e811]: 鹿児島市（D2-3）：
+            - text: 鹿児島市立病院 / 鹿児島大学病院
+            - generic [ref=e812]: 3次救急。桜島・天文館での急病時
+          - listitem [ref=e813]:
+            - generic [ref=e814]: 屋久島（D3-4）：
+            - text: 屋久島徳洲会病院（約140床）
+            - generic [ref=e815]: 島で唯一の入院機能。重症は本土搬送に。島では無理をしない
+      - generic [ref=e816]:
+        - generic [ref=e817]:
+          - img [ref=e818]
+          - heading "公式リンク（運航・火山・天気）" [level=3] [ref=e822]
+        - generic [ref=e823]:
+          - link "気象庁 噴火警報・火山" [ref=e824] [cursor=pointer]:
+            - /url: https://www.jma.go.jp/bosai/volcano/
+            - img [ref=e825]
+            - generic [ref=e829]: 気象庁 噴火警報・火山
+          - link "阿蘇火山 火口規制情報" [ref=e830] [cursor=pointer]:
+            - /url: https://www.aso-volcano.jp/
+            - img [ref=e831]
+            - generic [ref=e835]: 阿蘇火山 火口規制情報
+          - link "MBC 桜島降灰予報" [ref=e836] [cursor=pointer]:
+            - /url: https://www.mbc.co.jp/weather/kouhai.php
+            - img [ref=e837]
+            - generic [ref=e841]: MBC 桜島降灰予報
+          - link "環境省 熱中症（WBGT）" [ref=e842] [cursor=pointer]:
+            - /url: https://www.wbgt.env.go.jp/
+            - img [ref=e843]
+            - generic [ref=e847]: 環境省 熱中症（WBGT）
+          - link "高速船 運航状況" [ref=e848] [cursor=pointer]:
+            - /url: https://www.tykousoku.jp/etc/operation.php
+            - img [ref=e849]
+            - generic [ref=e853]: 高速船 運航状況
+          - link "桜島フェリー 運航状況" [ref=e854] [cursor=pointer]:
+            - /url: https://www.city.kagoshima.lg.jp/sakurajima-ferry/unko_jokyo/unkojyokyo.html
+            - img [ref=e855]
+            - generic [ref=e859]: 桜島フェリー 運航状況
+          - link "屋久島観光協会 交通運航状況" [ref=e860] [cursor=pointer]:
+            - /url: https://yakukan.jp/safe-travel/transportation.html
+            - img [ref=e861]
+            - generic [ref=e865]: 屋久島観光協会 交通運航状況
+          - link "屋久島レク森協議会（白谷規制）" [ref=e866] [cursor=pointer]:
+            - /url: https://y-rekumori.com/
+            - img [ref=e867]
+            - generic [ref=e871]: 屋久島レク森協議会（白谷規制）
+          - link "高千穂峡 ボート予約" [ref=e872] [cursor=pointer]:
+            - /url: https://eipro.jp/takachiho1/
+            - img [ref=e873]
+            - generic [ref=e877]: 高千穂峡 ボート予約
+          - link "屋久島徳洲会病院" [ref=e878] [cursor=pointer]:
+            - /url: https://www.yakushimatokushukai.com/
+            - img [ref=e879]
+            - generic [ref=e883]: 屋久島徳洲会病院
+  - contentinfo [ref=e884]:
+    - text: 料金・時刻・規制は変動します。出発前に各公式で最新情報をご確認ください。
+    - text: 南九州＆屋久島 3泊4日 旅のしおり
+  - navigation "セクションナビ" [ref=e885]:
+    - generic [ref=e886]:
+      - button "日程" [ref=e887]:
+        - img [ref=e888]
+        - generic [ref=e890]: 日程
+      - button "地図" [ref=e891]:
+        - img [ref=e892]
+        - generic [ref=e894]: 地図
+      - button "費用" [ref=e895]:
+        - img [ref=e896]
+        - generic [ref=e899]: 費用
+      - button "情報" [ref=e900]:
+        - img [ref=e901]
+        - generic [ref=e903]: 情報

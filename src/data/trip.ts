@@ -1,0 +1,227 @@
+import type { Day } from './types'
+
+export const tripMeta = {
+  title: '南九州＆屋久島',
+  subtitle: '3泊4日 ロードマップ',
+  badge: '限界突破！夏のフルスロットルプラン',
+  season: '夏（6〜8月）想定',
+  lead: '阿蘇の草原、高千穂の渓谷、霧島の神話、桜島の活火山、そして屋久島の原生林。毎日まったく違う絶景に出会う周遊ルート。',
+  stats: [
+    { label: '日程', value: '3泊4日' },
+    { label: 'エリア', value: '3県＋離島' },
+    { label: '移動', value: '車・船・高速船' },
+  ],
+} as const
+
+export const dayColors = {
+  d1: '#16a34a',
+  d2: '#eab308',
+  d3: '#3b82f6',
+  d4: '#ef4444',
+} as const
+
+export const days: Day[] = [
+  {
+    id: 'd1',
+    label: 'D1',
+    title: '熊本 → 阿蘇 → 高千穂',
+    subtitle: '草原と火山から、神話の渓谷へ',
+    color: dayColors.d1,
+    spots: [
+      {
+        id: 'd1-start',
+        time: '10:00',
+        title: '熊本 集合・出発',
+        icon: 'users',
+        lead: '熊本空港または熊本駅に集合。🚗 1台目のレンタカーを配車して出発！',
+        places: [{ name: '熊本駅', coord: { lat: 32.7895, lng: 130.6884 } }],
+        badges: [{ kind: 'reserve', text: 'レンタカー①は事前予約（乗り捨て可否も確認）' }],
+      },
+      {
+        id: 'd1-aso',
+        time: '11:30',
+        title: '阿蘇エリア',
+        icon: 'mountain',
+        lead: '草原と火山のドライブ。',
+        places: [
+          { name: '草千里ヶ浜', coord: { lat: 32.8829, lng: 131.056 }, note: '大草原と火口湖、放牧の馬' },
+          { name: '大観峰', coord: { lat: 32.9709, lng: 131.1078 }, note: '阿蘇五岳とカルデラの大展望' },
+          {
+            name: '中岳火口',
+            coord: { lat: 32.8847, lng: 131.0848 },
+            note: '※2026年6月時点 見学閉鎖中。当日の規制を要確認',
+          },
+        ],
+        badges: [
+          { kind: 'food', text: '昼食：あか牛丼' },
+          { kind: 'warn', text: '中岳火口は閉鎖中の可能性大 → 草千里・大観峰を中心に' },
+        ],
+        tip: '夏の草原は遮るものなし。帽子・日焼け止め・水分を。火口規制は aso-volcano.jp で当日必ず確認。',
+      },
+      {
+        id: 'd1-takachiho',
+        time: '16:00',
+        title: '高千穂峡',
+        icon: 'waves',
+        lead: '阿蘇から約1.5時間のドライブ。柱状節理の渓谷と真名井の滝。',
+        places: [{ name: '高千穂峡（真名井の滝）', coord: { lat: 32.715, lng: 131.3034 } }],
+        badges: [
+          { kind: 'reserve', text: '貸しボートはネット予約制（2週間前〜2日前・電話不可）。夏は完全予約制' },
+          { kind: 'warn', text: '増水・点検時は運休。当日朝に運航状況を確認' },
+        ],
+        tip: 'ボートは1艇30分 平日4,100円／繁忙期5,100円（定員3名）。8月は予約必須。',
+      },
+      {
+        id: 'd1-stay',
+        time: '夜',
+        title: '高千穂泊・高千穂神楽',
+        icon: 'moon',
+        lead: '高千穂神社 神楽殿で毎晩20:00〜21:00の「高千穂神楽」を観覧（代表4番）。',
+        places: [{ name: '高千穂神社', coord: { lat: 32.7083, lng: 131.3081 } }],
+        badges: [{ kind: 'info', text: '観覧 約1,000円。オンライン予約枠あり（30日前〜）' }],
+        tip: '集落の本格「夜神楽」は11月中旬〜2月。夏に観られるのは毎晩開催のこの神楽です。',
+      },
+    ],
+  },
+  {
+    id: 'd2',
+    label: 'D2',
+    title: '高千穂 → 霧島 → 桜島 → 鹿児島',
+    subtitle: '神話の山岳から活火山を抜け、海を渡る',
+    color: dayColors.d2,
+    spots: [
+      {
+        id: 'd2-depart',
+        time: '08:00',
+        title: '出発（南下）',
+        icon: 'car',
+        lead: '高千穂から霧島へ南下（約2.5〜3時間）。朝は早めの出発が吉。',
+      },
+      {
+        id: 'd2-kirishima',
+        time: '11:00',
+        title: '霧島エリア',
+        icon: 'tent',
+        places: [
+          { name: 'えびの高原', coord: { lat: 31.9446, lng: 130.853 }, note: '火口湖と火山景観。夏は涼しい' },
+          { name: '霧島神宮', coord: { lat: 31.8589, lng: 130.8722 }, note: '杉木立の参道と朱塗りの社殿' },
+          { name: '高千穂河原', coord: { lat: 31.891, lng: 130.8775 }, note: '天孫降臨伝説の地・高千穂峰登山口' },
+        ],
+        badges: [
+          { kind: 'food', text: '昼食：霧島温泉周辺で' },
+          { kind: 'info', text: '霧島神宮 授与所 8:00〜17:00頃' },
+        ],
+      },
+      {
+        id: 'd2-sakurajima',
+        time: '15:00',
+        title: '桜島',
+        icon: 'flame',
+        places: [
+          { name: '湯之平展望所', coord: { lat: 31.5972, lng: 130.6378 }, note: '一般車で行ける最高所(373m)。売店9:00〜17:00' },
+          { name: '黒神埋没鳥居', coord: { lat: 31.6044, lng: 130.725 }, note: '大正大噴火で埋もれた鳥居' },
+          { name: '有村溶岩展望所', coord: { lat: 31.5567, lng: 130.6781 }, note: '溶岩原の遊歩道。夕方の雰囲気が最高' },
+        ],
+        badges: [{ kind: 'warn', text: '降灰に注意（風向き次第）。マスク・帽子・サングラスを' }],
+        tip: 'MBC桜島降灰予報で上空の風向きを確認し、降灰側の展望所は時間調整を。',
+      },
+      {
+        id: 'd2-ferry',
+        time: '夕方',
+        title: '桜島フェリー ＆ レンタカー①返却',
+        icon: 'ship',
+        lead: '車ごとフェリーで鹿児島市街へ（約15分）。到着後、1台目のレンタカーを返却。',
+        places: [{ name: '桜島港（フェリー）', coord: { lat: 31.5797, lng: 130.6097 } }],
+        badges: [{ kind: 'info', text: '車両航送 4〜5m未満 1,700〜2,350円（運転手1名込）。4:00〜23:30運航・予約不要' }],
+      },
+      {
+        id: 'd2-stay',
+        time: '夜',
+        title: '鹿児島市泊（天文館）',
+        icon: 'glass-water',
+        lead: '天文館に繰り出し、黒豚しゃぶしゃぶ・しろくま・さつま揚げを堪能！',
+        places: [{ name: '天文館', coord: { lat: 31.591, lng: 130.556 } }],
+        badges: [{ kind: 'food', text: '黒豚・しろくま・さつま揚げ' }],
+      },
+    ],
+  },
+  {
+    id: 'd3',
+    label: 'D3',
+    title: '鹿児島 → 屋久島',
+    subtitle: 'いざ、世界遺産の苔むす森へ',
+    color: dayColors.d3,
+    spots: [
+      {
+        id: 'd3-ferry',
+        time: '朝',
+        title: '鹿児島本港 発（高速船）',
+        icon: 'ship',
+        lead: '高速船トッピー＆ロケットで屋久島へ（直行 約1時間50分）。到着後、🚙 2台目のレンタカーをピックアップ。',
+        places: [
+          { name: '鹿児島本港 南ふ頭（高速船）', coord: { lat: 31.587, lng: 130.5705 }, note: '桜島フェリー乗り場とは別ターミナル' },
+          { name: '屋久島 宮之浦港', coord: { lat: 31.3963, lng: 130.556 } },
+        ],
+        badges: [
+          { kind: 'reserve', text: '高速船は2ヶ月前〜予約。夏は早めに（往復割引25,900円）' },
+          { kind: 'warn', text: '台風時は欠航も。毎朝、運航状況を確認' },
+        ],
+      },
+      {
+        id: 'd3-shiratani',
+        time: '午後',
+        title: '白谷雲水峡',
+        icon: 'tree-pine',
+        lead: '「もののけの森」のモデルとされる苔むす森をトレッキング。',
+        places: [{ name: '白谷雲水峡', coord: { lat: 30.359, lng: 130.517 }, note: '宮之浦から車で約30〜40分の山道' }],
+        badges: [
+          { kind: 'info', text: '森林環境整備協力金 500円/人' },
+          { kind: 'tip', text: '奉行杉コース(約3h)が現実的。太鼓岩往復は約4〜5h' },
+        ],
+        tip: '雨前提。登山用レインウェア上下が必携。沢の増水時は無理せず引き返す判断を最優先に。',
+      },
+      {
+        id: 'd3-stay',
+        time: '夜',
+        title: '屋久島（宮之浦周辺）泊',
+        icon: 'fish',
+        lead: '地元の海産物や名物のトビウオ料理を楽しむ。',
+        places: [{ name: '宮之浦', coord: { lat: 31.3963, lng: 130.556 } }],
+        badges: [{ kind: 'food', text: 'トビウオ・首折れサバ' }],
+      },
+    ],
+  },
+  {
+    id: 'd4',
+    label: 'D4',
+    title: '屋久島一周 → 解散',
+    subtitle: '森と海を駆け抜け、それぞれの帰路へ',
+    color: dayColors.d4,
+    spots: [
+      {
+        id: 'd4-loop',
+        time: '午前',
+        title: '屋久島一周ドライブ',
+        icon: 'route',
+        lead: 'おすすめ周回ルート（自由度高め）。反時計回りが流れが良い。',
+        places: [
+          { name: '西部林道', coord: { lat: 30.353, lng: 130.417 }, note: 'ヤクザル・ヤクシカに遭遇する世界遺産の狭路' },
+          { name: '永田いなか浜', coord: { lat: 30.3833, lng: 130.417 }, note: 'アカウミガメ産卵地の白浜' },
+          { name: '大川の滝', coord: { lat: 30.2436, lng: 130.4314 }, note: '落差88m・日本の滝百選' },
+          { name: '中間ガジュマル', coord: { lat: 30.2356, lng: 130.466 }, note: '車道がくぐる巨大ガジュマル' },
+          { name: '千尋の滝', coord: { lat: 30.2725, lng: 130.555 }, note: '一枚岩の谷に落ちる滝' },
+        ],
+        badges: [{ kind: 'warn', text: '西部林道は狭路・動物注意。スピード控えめに' }],
+        tip: '給油は集落で早めに。離島はGSが少なく日曜・夕方は閉まることも。',
+      },
+      {
+        id: 'd4-goal',
+        time: '13:00頃',
+        title: 'レンタカー返却・解散',
+        icon: 'plane-takeoff',
+        lead: '屋久島空港でレンタカーを返却し、14:00以降 現地解散。お疲れ様でした！',
+        places: [{ name: '屋久島空港', coord: { lat: 30.3856, lng: 130.6589 } }],
+      },
+    ],
+  },
+]
