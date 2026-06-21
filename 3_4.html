@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>限界突破！南九州＆屋久島 3泊4日ロードマップ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        #map { z-index: 10; }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 1.5rem;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Header -->
+    <header class="bg-brand-900 text-white py-12 px-6 shadow-md relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1598901962386-8de1b3297ee4?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-900/50 to-brand-900"></div>
+        <div class="relative max-w-4xl mx-auto text-center z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 text-brand-100 border border-brand-500/30 text-sm font-bold tracking-widest mb-4">
+                限界突破！3泊4日フルスロットルプラン
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black mb-4 leading-tight">南九州＆屋久島<br class="md:hidden"> ロードマップ</h1>
+            <p class="text-brand-100 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+                阿蘇の火山、高千穂の渓谷、霧島の神話、桜島の活火山、そして屋久島の原生林。毎日まったく違う絶景に出会う、完成度MAXの周遊ルート。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-12">
+
+        <!-- Highlights -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mb-4">
+                    <i data-lucide="map" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">3県制覇＋離島</h3>
+                <p class="text-sm text-slate-600">熊本、宮崎、鹿児島の南九州3県を縦断し、フェリーで世界遺産・屋久島へ。完璧な直線動線。</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4">
+                    <i data-lucide="camera" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">毎日変わる絶景</h3>
+                <p class="text-sm text-slate-600">草原、渓谷、温泉、活火山、苔むす森、海。シャッターを切り続けたくなる多彩な被写体。</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+                    <i data-lucide="car-front" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2">多彩なアクティビティ</h3>
+                <p class="text-sm text-slate-600">絶景ドライブ、神社巡り、ボート、トレッキング、温泉、ご当地グルメをすべて網羅。</p>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section>
+            <div class="flex items-center gap-2 mb-6">
+                <i data-lucide="map-pinned" class="text-brand-600 w-6 h-6"></i>
+                <h2 class="text-2xl font-bold">全体ルートマップ</h2>
+            </div>
+            <div class="bg-white p-2 rounded-2xl shadow-sm border border-slate-200">
+                <div id="map" class="h-[400px] w-full rounded-xl relative"></div>
+            </div>
+        </section>
+
+        <!-- Itinerary -->
+        <section>
+            <div class="flex items-center gap-2 mb-8">
+                <i data-lucide="calendar-days" class="text-brand-600 w-6 h-6"></i>
+                <h2 class="text-2xl font-bold">ツアースケジュール</h2>
+            </div>
+
+            <div class="relative timeline-line space-y-12 pb-8">
+                
+                <!-- Day 1 -->
+                <div class="relative z-10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-4 border-white z-10">
+                            D1
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">熊本 → 阿蘇 → 高千穂</h3>
+                            <p class="text-slate-500 text-sm">草原と火山から、神話の渓谷へ</p>
+                        </div>
+                    </div>
+                    <div class="ml-6 pl-10">
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6 space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="text-slate-400 mt-1"><i data-lucide="users" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">10:00 熊本集合</div>
+                                    <p class="text-sm text-slate-600">熊本空港または熊本駅に集合。<br>🚗 1台目のレンタカーを配車して出発！</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="mountain" class="w-5 h-5"></i></div>
+                                <div class="w-full">
+                                    <div class="font-bold text-brand-600">11:30 阿蘇エリア</div>
+                                    <ul class="text-sm text-slate-700 mt-2 space-y-1">
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">①</span> 草千里（広大な草原と馬）</li>
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">②</span> 中岳火口（規制がなければ必見）</li>
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">③</span> 大観峰（阿蘇五岳を見渡す絶景）</li>
+                                    </ul>
+                                    <div class="mt-3 inline-flex items-center gap-1 bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-xs font-bold border border-orange-200">
+                                        <i data-lucide="utensils" class="w-3 h-3"></i> 昼食：あか牛丼（阿蘇来た感MAX！）
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="waves" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">16:00 高千穂到着</div>
+                                    <p class="text-sm text-slate-600 mb-1">阿蘇から約1.5時間のドライブ。</p>
+                                    <ul class="text-sm text-slate-700 space-y-1">
+                                        <li>・<strong>高千穂峡：</strong>真名井の滝、柱状節理の遊歩道</li>
+                                        <li><span class="text-xs text-rose-500 font-bold">※ボートは混むので事前予約推奨！</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="moon" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">夜：高千穂泊</div>
+                                    <p class="text-sm text-slate-600">時間が合えば高千穂神社で「夜神楽」を見学。旅情たっぷりの夜。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="relative z-10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-4 border-white z-10">
+                            D2
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">高千穂 → 霧島 → 桜島 → 鹿児島</h3>
+                            <p class="text-slate-500 text-sm">神話の山岳から活火山を抜け、海を渡る</p>
+                        </div>
+                    </div>
+                    <div class="ml-6 pl-10">
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6 space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="text-slate-400 mt-1"><i data-lucide="car" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">08:00 出発</div>
+                                    <p class="text-sm text-slate-600">高千穂から霧島へ南下（約2.5〜3時間）</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="tent-tree" class="w-5 h-5"></i></div>
+                                <div class="w-full">
+                                    <div class="font-bold text-brand-600">11:00 霧島エリア</div>
+                                    <ul class="text-sm text-slate-700 mt-2 space-y-1">
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">①</span> えびの高原（火口湖と火山景観）</li>
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">②</span> 霧島神宮（神話感が強いパワースポット）</li>
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">③</span> 高千穂河原（天孫降臨伝説の地）</li>
+                                    </ul>
+                                    <div class="mt-3 inline-flex items-center gap-1 bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-xs font-bold border border-orange-200">
+                                        <i data-lucide="utensils" class="w-3 h-3"></i> 昼食：霧島温泉周辺で
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="volcano" class="w-5 h-5"></i></div>
+                                <div class="w-full">
+                                    <div class="font-bold text-brand-600">15:00 桜島</div>
+                                    <ul class="text-sm text-slate-700 mt-2 space-y-1">
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">①</span> 湯之平展望所（桜島で一番近くまで行ける）</li>
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">②</span> 黒神埋没鳥居（大噴火の凄さを実感）</li>
+                                        <li><span class="inline-block w-5 text-center font-bold text-brand-500">③</span> 有村溶岩展望所（夕方の雰囲気が最高）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="ship" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">夕方：桜島フェリー ＆ レンタカー返却</div>
+                                    <p class="text-sm text-slate-600">車ごとフェリーに乗り鹿児島市街地へ。到着後、1台目のレンタカーを返却。</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="glass-water" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">夜：鹿児島市泊</div>
+                                    <p class="text-sm text-slate-600">天文館に繰り出し、黒豚しゃぶしゃぶ、しろくま、さつま揚げを堪能！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="relative z-10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-4 border-white z-10">
+                            D3
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">鹿児島 → 屋久島</h3>
+                            <p class="text-slate-500 text-sm">いざ、世界遺産の苔むす森へ</p>
+                        </div>
+                    </div>
+                    <div class="ml-6 pl-10">
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6 space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="text-slate-400 mt-1"><i data-lucide="ship" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">朝：鹿児島港 発</div>
+                                    <p class="text-sm text-slate-600">高速船（トッピー＆ロケット）で約2時間。<br>屋久島到着後、🚗 2台目のレンタカーをピックアップ。</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="tree-pine" class="w-5 h-5"></i></div>
+                                <div class="w-full">
+                                    <div class="font-bold text-brand-600">午後：白谷雲水峡</div>
+                                    <p class="text-sm text-slate-600 mb-2">もののけ姫の舞台のモデルと言われる苔むす森をトレッキング。</p>
+                                    <div class="bg-brand-50 text-brand-800 p-3 rounded-lg text-sm font-medium">
+                                        💡 <strong>おすすめ：</strong> 奉行杉コース以上。体力と時間があれば「太鼓岩」まで行ければ最高！
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="fish-symbol" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">夜：屋久島（宮之浦周辺）泊</div>
+                                    <p class="text-sm text-slate-600">地元の海産物や名物のトビウオ料理を楽しむ。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="relative z-10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-4 border-white z-10">
+                            D4
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold">屋久島一周 → 解散</h3>
+                            <p class="text-slate-500 text-sm">森と海を駆け抜け、それぞれの帰路へ</p>
+                        </div>
+                    </div>
+                    <div class="ml-6 pl-10">
+                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6 space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="text-slate-400 mt-1"><i data-lucide="route" class="w-5 h-5"></i></div>
+                                <div class="w-full">
+                                    <div class="font-bold text-brand-600">午前：屋久島一周ドライブ（自由度高め）</div>
+                                    <p class="text-sm text-slate-600 mb-2">おすすめ周回ルート：</p>
+                                    <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">宮之浦</span>
+                                        <i data-lucide="arrow-right" class="w-4 h-4 mt-1"></i>
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">西部林道 (ヤクザル/ヤクシカ)</span>
+                                        <i data-lucide="arrow-right" class="w-4 h-4 mt-1"></i>
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">永田いなか浜</span>
+                                        <i data-lucide="arrow-right" class="w-4 h-4 mt-1"></i>
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">大川の滝</span>
+                                        <i data-lucide="arrow-right" class="w-4 h-4 mt-1"></i>
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">中間ガジュマル</span>
+                                        <i data-lucide="arrow-right" class="w-4 h-4 mt-1"></i>
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">千尋の滝</span>
+                                        <i data-lucide="arrow-right" class="w-4 h-4 mt-1"></i>
+                                        <span class="bg-white px-2 py-1 rounded shadow-sm border border-slate-200">空港</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start border-t border-slate-100 pt-4">
+                                <div class="text-slate-400 mt-1"><i data-lucide="plane-takeoff" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-brand-600">13:00頃 レンタカー返却 ＆ 14:00以降 解散</div>
+                                    <p class="text-sm text-slate-600">屋久島空港でレンタカーを返却し、現地解散。お疲れ様でした！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Transport & Access -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
+            <!-- Rent-a-car -->
+            <div class="bg-slate-800 text-white p-6 rounded-2xl shadow-lg">
+                <div class="flex items-center gap-2 mb-4 text-brand-400">
+                    <i data-lucide="car-key" class="w-6 h-6"></i>
+                    <h3 class="text-xl font-bold text-white">レンタカー戦略（重要）</h3>
+                </div>
+                <p class="text-sm text-slate-300 mb-4">海を渡るため、レンタカーは「2回」に分けて借ります。</p>
+                <div class="space-y-4">
+                    <div class="bg-slate-700/50 p-4 rounded-xl">
+                        <div class="font-bold text-brand-300 mb-1">🚗 1台目（九州本土）</div>
+                        <ul class="text-sm space-y-1 text-slate-200">
+                            <li><strong>借受：</strong> 1日目午前・熊本空港/駅</li>
+                            <li><strong>返却：</strong> 2日目夕方・鹿児島市内</li>
+                            <li class="text-xs text-rose-300 mt-1">※別店舗に返すワンウェイ（乗り捨て）利用</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-700/50 p-4 rounded-xl">
+                        <div class="font-bold text-brand-300 mb-1">🚙 2台目（屋久島）</div>
+                        <ul class="text-sm space-y-1 text-slate-200">
+                            <li><strong>借受：</strong> 3日目午前・屋久島の港</li>
+                            <li><strong>返却：</strong> 4日目午後・屋久島空港</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <i data-lucide="plane" class="text-brand-600 w-6 h-6"></i>
+                    <h3 class="text-xl font-bold">各地からのアクセス案</h3>
+                </div>
+                <p class="text-xs text-slate-500 mb-4">集合：1日目 10:00 ／ 解散：4日目 14:00以降</p>
+                <div class="space-y-4">
+                    <div>
+                        <div class="font-bold text-slate-800 text-sm bg-slate-100 px-2 py-1 rounded inline-block mb-1">■ 東京メンバー</div>
+                        <p class="text-sm text-slate-600"><strong>行：</strong>羽田 ➡ 熊本空港 (早朝便)<br><strong>帰：</strong>屋久島空港 ➡ 鹿児島空港(乗継) ➡ 羽田</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3">
+                        <div class="font-bold text-slate-800 text-sm bg-slate-100 px-2 py-1 rounded inline-block mb-1">■ 大阪メンバー</div>
+                        <p class="text-sm text-slate-600"><strong>行：</strong>伊丹 ➡ 熊本空港 または 新幹線で熊本駅<br><strong>帰：</strong>屋久島空港 ➡ 伊丹空港 <span class="text-brand-600 font-bold">(直行便あり！)</span></p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3">
+                        <div class="font-bold text-slate-800 text-sm bg-slate-100 px-2 py-1 rounded inline-block mb-1">■ 京都メンバー</div>
+                        <p class="text-sm text-slate-600"><strong>行：</strong>京都駅 ➡ 熊本駅 (新幹線)<br><strong>帰：</strong>屋久島 ➡ 伊丹(直行便) ➡ リムジンバスで京都</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Map Script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            // Initialize Map
+            const map = L.map('map', {
+                scrollWheelZoom: false // スクロールでのズームを無効化（見やすくするため）
+            }).setView([31.6, 130.8], 7);
+
+            // Set Map Tiles (OpenStreetMap)
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            // Custom Icon
+            const createCustomIcon = (color) => {
+                return L.divIcon({
+                    className: 'custom-div-icon',
+                    html: `<div style="background-color: ${color}; width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.4);"></div>`,
+                    iconSize: [14, 14],
+                    iconAnchor: [7, 7]
+                });
+            };
+
+            // Locations (Coordinates)
+            const locations = [
+                { name: "熊本 (Start)", coords: [32.7898, 130.6880], day: 1, color: '#22c55e' },
+                { name: "阿蘇", coords: [32.8841, 131.0514], day: 1, color: '#22c55e' },
+                { name: "高千穂 (泊)", coords: [32.7015, 131.3006], day: 1, color: '#22c55e' },
+                { name: "霧島", coords: [31.9442, 130.8522], day: 2, color: '#eab308' },
+                { name: "桜島", coords: [31.5880, 130.6300], day: 2, color: '#eab308' },
+                { name: "鹿児島市 (泊)", coords: [31.5878, 130.5540], day: 2, color: '#eab308' },
+                { name: "屋久島 宮之浦 (泊)", coords: [30.4277, 130.5750], day: 3, color: '#3b82f6' },
+                { name: "白谷雲水峡", coords: [30.3800, 130.5400], day: 3, color: '#3b82f6' },
+                { name: "屋久島空港 (Goal)", coords: [30.3844, 130.6588], day: 4, color: '#ef4444' }
+            ];
+
+            // Add Markers
+            locations.forEach(loc => {
+                L.marker(loc.coords, { icon: createCustomIcon(loc.color) })
+                 .bindPopup(`<b>${loc.name}</b><br>Day ${loc.day}`)
+                 .addTo(map);
+            });
+
+            // Draw Route Lines
+            // Day 1-2 (Drive)
+            const driveRoute = [
+                locations[0].coords, locations[1].coords, locations[2].coords, 
+                locations[3].coords, locations[4].coords, locations[5].coords
+            ];
+            L.polyline(driveRoute, { color: '#16a34a', weight: 4, opacity: 0.7 }).addTo(map);
+
+            // Ferry Route (Kagoshima to Yakushima)
+            const ferryRoute = [
+                locations[5].coords, 
+                [30.9, 130.6], // 中間点
+                locations[6].coords
+            ];
+            L.polyline(ferryRoute, { color: '#3b82f6', weight: 4, dashArray: '5, 10', opacity: 0.7 }).addTo(map);
+
+            // Yakushima Route
+            const yakushimaRoute = [
+                locations[6].coords, locations[7].coords, locations[8].coords
+            ];
+            L.polyline(yakushimaRoute, { color: '#3b82f6', weight: 4, opacity: 0.7 }).addTo(map);
+
+            // Fit bounds to show all markers
+            const bounds = L.latLngBounds(locations.map(loc => loc.coords));
+            map.fitBounds(bounds, { padding: [30, 30] });
+        });
+    </script>
+</body>
+</html>
