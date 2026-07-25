@@ -13,11 +13,13 @@ export const tripMeta = {
   ],
 } as const
 
+/* Day の色は「その日に見る土地の色」から取る（汎用の赤青黄緑にしない）。
+   D1 阿蘇の草原＝若草／D2 桜島の火＝朱／D3 海を渡る＝藍／D4 屋久島＝苔 */
 export const dayColors = {
-  d1: '#16a34a',
-  d2: '#eab308',
-  d3: '#3b82f6',
-  d4: '#ef4444',
+  d1: '#6b8f3c',
+  d2: '#bd5730',
+  d3: '#356a8c',
+  d4: '#1f6b5c',
 } as const
 
 export const days: Day[] = [

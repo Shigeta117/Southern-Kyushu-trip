@@ -122,7 +122,7 @@ export function TripMap() {
         ))}
       </div>
 
-      <div className="bg-white p-2 rounded-2xl shadow-sm border border-slate-200">
+      <div className="bg-white p-2 rounded-xl border border-slate-200">
         <div ref={containerRef} className="h-[55vh] min-h-[320px] max-h-[480px] w-full rounded-xl overflow-hidden" />
       </div>
       <p className="text-xs text-slate-500 mt-2">

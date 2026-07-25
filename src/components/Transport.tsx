@@ -10,10 +10,10 @@ export function Transport() {
 
       <div className="space-y-4">
         {transportCards.map((card) => (
-          <div key={card.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5">
+          <div key={card.id} className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5">
             <div className="flex items-center gap-2 mb-3">
               <Icon name={card.icon} className="w-5 h-5 text-brand-600 shrink-0" />
-              <h3 className="font-bold text-slate-900">{card.title}</h3>
+              <h3 className="font-display text-slate-900">{card.title}</h3>
             </div>
             {card.lead && <p className="text-sm text-slate-600 mb-3">{card.lead}</p>}
 
@@ -29,7 +29,7 @@ export function Transport() {
             {card.notes && card.notes.length > 0 && (
               <ul className="mt-3 space-y-1">
                 {card.notes.map((n, i) => (
-                  <li key={i} className="text-xs text-rose-600 flex gap-1.5 leading-snug">
+                  <li key={i} className="text-xs text-ember-600 flex gap-1.5 leading-snug">
                     <Icon name="warn" className="w-3.5 h-3.5 shrink-0 mt-0.5" />
                     <span>{n}</span>
                   </li>
@@ -48,15 +48,17 @@ export function Transport() {
         ))}
       </div>
 
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 mt-4">
+      <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 mt-4">
         <div className="flex items-center gap-2 mb-3">
           <Icon name="plane-takeoff" className="w-5 h-5 text-brand-600 shrink-0" />
-          <h3 className="font-bold text-slate-900">各地からのアクセス</h3>
+          <h3 className="font-display text-slate-900">各地からのアクセス</h3>
         </div>
-        <p className="text-xs text-slate-500 mb-3">集合：1日目 10:00 ／ 解散：4日目 14:00以降</p>
+        <p className="tabular text-xs text-slate-500 mb-3">
+          集合：8/23 10:30 熊本空港 ／ 解散：8/26 19:00 屋久島空港発
+        </p>
         <div className="space-y-3">
           {accessPlans.map((a) => (
-            <div key={a.area} className="border-t border-slate-100 pt-3 first:border-0 first:pt-0">
+            <div key={a.area} className="border-t border-slate-200 pt-3 first:border-0 first:pt-0">
               <div className="font-bold text-sm bg-slate-100 inline-block px-2 py-0.5 rounded mb-1">
                 ■ {a.area}
               </div>

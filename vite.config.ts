@@ -15,10 +15,10 @@ export default defineConfig({
       manifest: {
         name: '南九州＆屋久島 3泊4日 旅のしおり',
         short_name: '旅のしおり',
-        description: '熊本・阿蘇・高千穂・霧島・桜島・鹿児島・屋久島をめぐる3泊4日のモバイル旅のしおり',
+        description: '熊本・阿蘇・高千穂・宮崎・霧島・桜島・鹿児島・屋久島をめぐる2026/8/23-26 3泊4日のモバイル旅のしおり',
         lang: 'ja',
-        theme_color: '#14532d',
-        background_color: '#f8fafc',
+        theme_color: '#1d2e1a',
+        background_color: '#f7f4ec',
         display: 'standalone',
         orientation: 'portrait',
         icons: [

@@ -3,38 +3,48 @@ import { Icon } from './Icon'
 
 export function Hero() {
   return (
-    <header className="relative overflow-hidden bg-gradient-to-b from-brand-600 via-brand-800 to-brand-900 text-white">
-      {/* 装飾（オフラインでも崩れないCSSのみ） */}
+    <header className="relative overflow-hidden bg-brand-900 text-white">
+      {/* 地形図の等高線。CSS のみで描くのでオフラインでも欠けない */}
+      <div className="contour absolute inset-0" aria-hidden="true" />
+      {/* 森の底に沈むような減光 */}
       <div
-        className="absolute inset-0 opacity-15"
+        className="absolute inset-0"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 20% 20%, rgba(255,255,255,.6) 0, transparent 35%), radial-gradient(circle at 80% 0%, rgba(253,224,71,.5) 0, transparent 30%)',
+            'linear-gradient(180deg, rgba(29,46,26,0) 0%, rgba(20,32,18,.55) 70%, rgba(16,26,15,.9) 100%)',
         }}
         aria-hidden="true"
       />
-      <div className="relative max-w-3xl mx-auto px-5 pt-9 pb-8 text-center">
-        <span className="inline-block py-1 px-3 rounded-full bg-white/15 border border-white/25 text-xs font-bold tracking-widest mb-4">
+
+      <div className="relative max-w-3xl mx-auto px-5 pt-10 pb-9">
+        <span className="tabular inline-block border border-white/30 rounded-sm py-1 px-2.5 text-[11px] font-bold tracking-[0.18em] text-brand-100">
           {tripMeta.badge}
         </span>
-        <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-2">
+
+        <h1 className="font-display text-[2rem] sm:text-5xl leading-[1.15] mt-4">
           {tripMeta.title}
-          <br className="sm:hidden" />
-          <span className="sm:ml-3">{tripMeta.subtitle}</span>
         </h1>
-        <div className="inline-flex items-center gap-1.5 text-brand-100 text-sm font-bold mb-4">
-          <Icon name="sun" className="w-4 h-4" />
-          {tripMeta.season}
+        <p className="font-display text-base sm:text-xl text-brand-200 mt-1">{tripMeta.subtitle}</p>
+
+        <div className="flex items-center gap-2 mt-4">
+          <span className="h-px w-8 bg-white/35" aria-hidden="true" />
+          <span className="inline-flex items-center gap-1.5 text-brand-200 text-xs font-bold tracking-wider">
+            <Icon name="sun" className="w-3.5 h-3.5" />
+            {tripMeta.season}
+          </span>
         </div>
-        <p className="text-brand-50/90 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+
+        <p className="text-brand-50/85 text-sm sm:text-base leading-loose max-w-xl mt-4">
           {tripMeta.lead}
         </p>
 
-        <dl className="grid grid-cols-3 gap-2 mt-6 max-w-md mx-auto">
-          {tripMeta.stats.map((s) => (
-            <div key={s.label} className="bg-white/10 border border-white/15 rounded-2xl py-3 px-2">
-              <dd className="text-base sm:text-lg font-black leading-tight">{s.value}</dd>
-              <dt className="text-[11px] text-brand-100 mt-0.5">{s.label}</dt>
+        <dl className="grid grid-cols-3 mt-7 border-t border-white/20 pt-4">
+          {tripMeta.stats.map((s, i) => (
+            <div key={s.label} className={i > 0 ? 'pl-3 border-l border-white/15' : 'pr-3'}>
+              <dt className="text-[10px] tracking-[0.14em] text-brand-200/80">{s.label}</dt>
+              <dd className="tabular font-display text-lg sm:text-2xl leading-tight mt-1">
+                {s.value}
+              </dd>
             </div>
           ))}
         </dl>

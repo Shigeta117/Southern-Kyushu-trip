@@ -1,18 +1,85 @@
 @import 'tailwindcss';
 
+/* ────────────────────────────────────────────────────────────
+   アートディレクション：「地形図と紙のしおり」
+   南九州の土地の色で組む。Tailwind 既定の green / slate は使わない。
+   ・地 = 紙（温かいオフホワイト）／墨 = 暖色寄りの黒
+   ・brand = 屋久杉と苔の緑（彩度を落とした森の色）
+   ・ember = 桜島・阿蘇の火（朱）
+   ・sea   = 海を渡る日の藍
+   ・ochre = 日向の陽（黄土）
+   slate は「暖かいグレー」に上書きしている。既存コンポーネントの
+   text-slate-600 等をそのまま使いつつ、青みだけを抜くための措置。
+   ──────────────────────────────────────────────────────────── */
 @theme {
-  --color-brand-50: #f0fdf4;
-  --color-brand-100: #dcfce7;
-  --color-brand-200: #bbf7d0;
-  --color-brand-300: #86efac;
-  --color-brand-400: #4ade80;
-  --color-brand-500: #22c55e;
-  --color-brand-600: #16a34a;
-  --color-brand-700: #15803d;
-  --color-brand-800: #166534;
-  --color-brand-900: #14532d;
+  /* 苔・屋久杉 */
+  --color-brand-50: #f1f5ef;
+  --color-brand-100: #dde8d9;
+  --color-brand-200: #bcd1b4;
+  --color-brand-300: #93b489;
+  --color-brand-400: #6c9560;
+  --color-brand-500: #4e7a42;
+  --color-brand-600: #3d6234;
+  --color-brand-700: #314f2b;
+  --color-brand-800: #283f23;
+  --color-brand-900: #1d2e1a;
+
+  /* 火山の朱 */
+  --color-ember-50: #fdf3ee;
+  --color-ember-100: #f8e0d3;
+  --color-ember-200: #eebfa6;
+  --color-ember-300: #e09a76;
+  --color-ember-400: #d0764c;
+  --color-ember-500: #bd5730;
+  --color-ember-600: #a04525;
+  --color-ember-700: #7f3620;
+  --color-ember-800: #632c1c;
+  --color-ember-900: #4a2216;
+
+  /* 海の藍 */
+  --color-sea-50: #eef3f7;
+  --color-sea-100: #d7e3ed;
+  --color-sea-200: #aec6da;
+  --color-sea-300: #7ea5c2;
+  --color-sea-400: #5285a8;
+  --color-sea-500: #356a8c;
+  --color-sea-600: #2a5573;
+  --color-sea-700: #23445c;
+  --color-sea-800: #1d3749;
+  --color-sea-900: #172b39;
+
+  /* 日向の陽（黄土） */
+  --color-ochre-50: #fcf6e9;
+  --color-ochre-100: #f6e8c8;
+  --color-ochre-200: #ebd095;
+  --color-ochre-300: #dbb45f;
+  --color-ochre-400: #c89a37;
+  --color-ochre-500: #ad8028;
+  --color-ochre-600: #8d6620;
+  --color-ochre-700: #6f501c;
+  --color-ochre-800: #57401a;
+  --color-ochre-900: #443216;
+
+  /* 暖色グレーで slate を上書き（青みを抜く） */
+  --color-slate-50: #f7f5f0;
+  --color-slate-100: #efece4;
+  --color-slate-200: #e2ddd2;
+  --color-slate-300: #c9c2b3;
+  --color-slate-400: #a49b8a;
+  --color-slate-500: #7d7466;
+  --color-slate-600: #5f574b;
+  --color-slate-700: #474138;
+  --color-slate-800: #332e28;
+  --color-slate-900: #23201b;
+
+  --color-paper: #f7f4ec;
+  --color-ink: #23201b;
 
   --font-sans: 'Noto Sans JP', sans-serif;
+  /* 見出し用の明朝。OS 同梱フォントのみで組むため追加DLは発生しない
+     （オフライン前提の PWA なので webfont を増やさない判断） */
+  --font-display: 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', 'YuMincho',
+    'Noto Serif JP', serif;
 }
 
 html {
@@ -23,10 +90,53 @@ html {
 
 body {
   margin: 0;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* 紙の粒子。SVG を data URI で焼き込むので外部依存もオフライン欠損もない */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 見出しの明朝 */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* 時刻・料金は桁を揃える */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* 等高線。地形図のモチーフを CSS だけで引く（依存ゼロ・オフライン安全） */
+.contour {
+  background-image:
+    repeating-radial-gradient(
+      circle at 22% 118%,
+      transparent 0 17px,
+      rgba(255, 255, 255, 0.075) 17px 18px
+    ),
+    repeating-radial-gradient(
+      circle at 88% -12%,
+      transparent 0 21px,
+      rgba(255, 255, 255, 0.05) 21px 22px
+    );
 }
 
 /* Leaflet の地図がヘッダー等の上に来ないように */
@@ -40,11 +150,35 @@ body {
   scroll-margin-top: 4.5rem;
 }
 
-/* 簡易フェードイン */
+/* ── 旅程のタイムライン ──
+   アイコンの丸を時間軸上のノードに見立て、縦線でつなぐ。
+   SpotCard 側のアイコンは w-9(2.25rem) なので中心は 1.125rem。 */
+.timeline > .timeline-item {
+  position: relative;
+}
+.timeline > .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 1.125rem;
+  top: 2.75rem;
+  bottom: -1.25rem;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-slate-300),
+    var(--color-slate-300) 60%,
+    transparent
+  );
+}
+.timeline > .timeline-item:last-child::before {
+  display: none;
+}
+
+/* 簡易フェードイン（開閉パネル用） */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -52,14 +186,35 @@ body {
   }
 }
 .animate-fade-in-up {
-  animation: fadeInUp 0.4s ease-out both;
+  animation: fadeInUp 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* パネル内の項目を軽くずらして出す（読む順序を作る） */
+.timeline > .timeline-item {
+  animation: fadeInUp 0.34s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.timeline > .timeline-item:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.timeline > .timeline-item:nth-child(2) {
+  animation-delay: 0.06s;
+}
+.timeline > .timeline-item:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.timeline > .timeline-item:nth-child(4) {
+  animation-delay: 0.14s;
+}
+.timeline > .timeline-item:nth-child(n + 5) {
+  animation-delay: 0.18s;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .animate-fade-in-up {
+  .animate-fade-in-up,
+  .timeline > .timeline-item {
     animation: none;
   }
 }

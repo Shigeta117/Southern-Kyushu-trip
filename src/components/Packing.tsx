@@ -33,16 +33,16 @@ export function Packing() {
 
       <div className="space-y-4">
         {packingGroups.map((g) => (
-          <div key={g.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4">
+          <div key={g.id} className="bg-white rounded-xl border border-slate-200 p-4">
             <div className="flex items-center gap-2 mb-2">
               <Icon name={g.icon} className="w-5 h-5 text-brand-600 shrink-0" />
-              <h3 className="font-bold text-slate-900">{g.title}</h3>
+              <h3 className="font-display text-slate-900">{g.title}</h3>
             </div>
             <ul>
               {g.items.map((item) => {
                 const on = !!checked[item.id]
                 return (
-                  <li key={item.id} className="border-t border-slate-100 first:border-0">
+                  <li key={item.id} className="border-t border-slate-200 first:border-0">
                     <label className="flex items-start gap-3 py-2.5 cursor-pointer select-none">
                       <input
                         type="checkbox"
