@@ -79,6 +79,28 @@ export interface OriginPlan {
   total: string
 }
 
+/** 予約・準備タスクの切迫度（見出しの色分けに使う） */
+export type TodoUrgency = 'now' | 'confirm' | 'dated' | 'before'
+
+export interface TodoItem {
+  /** localStorage 保存キー（並び替え・文言修正に強い安定ID） */
+  id: string
+  label: string
+  detail?: string
+  /** 担当が決まっているものだけ */
+  owner?: string
+  link?: LinkItem
+}
+
+export interface TodoGroup {
+  id: string
+  title: string
+  icon: IconName
+  urgency: TodoUrgency
+  lead?: string
+  items: TodoItem[]
+}
+
 export interface PackingItem {
   /** localStorage 保存キー（並び替え・追加に強い安定ID） */
   id: string

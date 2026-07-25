@@ -1,6 +1,7 @@
 import { Icon } from './Icon'
 
 const tabs = [
+  { id: 'todo', label: '準備', icon: 'clock' },
   { id: 'itinerary', label: '日程', icon: 'calendar' },
   { id: 'map', label: '地図', icon: 'map' },
   { id: 'budget', label: '費用', icon: 'wallet' },
@@ -14,7 +15,7 @@ export function BottomNav({ active, onJump }: { active: string; onJump: (id: str
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label="セクションナビ"
     >
-      <div className="max-w-3xl mx-auto grid grid-cols-4">
+      <div className="max-w-3xl mx-auto grid grid-cols-5">
         {tabs.map((t) => {
           const on = active === t.id
           return (
@@ -30,7 +31,7 @@ export function BottomNav({ active, onJump }: { active: string; onJump: (id: str
               {/* 現在地は上端の罫線で示す（色の差だけに頼らない） */}
               <span
                 aria-hidden="true"
-                className={`absolute top-0 inset-x-5 h-0.5 rounded-full transition-opacity ${
+                className={`absolute top-0 inset-x-3.5 h-0.5 rounded-full transition-opacity ${
                   on ? 'bg-brand-600 opacity-100' : 'opacity-0'
                 }`}
               />

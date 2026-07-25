@@ -3,6 +3,7 @@ import type { DayId } from './data/types'
 import { AppBar } from './components/AppBar'
 import { Hero } from './components/Hero'
 import { Highlights } from './components/Highlights'
+import { Todos } from './components/Todos'
 import { Itinerary } from './components/Itinerary'
 import { TripMap } from './components/TripMap'
 import { Budget } from './components/Budget'
@@ -13,7 +14,7 @@ import { BottomNav } from './components/BottomNav'
 import { BackToTop } from './components/BackToTop'
 import { useActiveSection } from './hooks/useActiveSection'
 
-const SECTION_IDS = ['itinerary', 'map', 'budget', 'transport', 'packing', 'emergency']
+const SECTION_IDS = ['todo', 'itinerary', 'map', 'budget', 'transport', 'packing', 'emergency']
 
 export default function App() {
   const [openDays, setOpenDays] = useState<Record<DayId, boolean>>({
@@ -24,7 +25,9 @@ export default function App() {
   })
 
   const active = useActiveSection(SECTION_IDS)
-  const activeTab = active === 'packing' || active === 'emergency' ? 'transport' : active
+  // 持ち物は「準備」タブ、緊急情報は「情報」タブに寄せる
+  const activeTab =
+    active === 'packing' ? 'todo' : active === 'emergency' ? 'transport' : active
 
   const toggleDay = (id: DayId) => setOpenDays((prev) => ({ ...prev, [id]: !prev[id] }))
 
@@ -43,6 +46,7 @@ export default function App() {
 
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-12">
         <Highlights />
+        <Todos />
         <Itinerary openDays={openDays} onToggleDay={toggleDay} />
         <TripMap />
         <Budget />
