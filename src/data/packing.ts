@@ -47,9 +47,9 @@ export const packingGroups: PackingGroup[] = [
     items: [
       { id: 'docs-license', label: '運転免許証' },
       { id: 'docs-rentacar', label: 'レンタカー予約確認（①九州本土 / ②屋久島）' },
-      { id: 'docs-ferry', label: '高速船の予約' },
+      { id: 'docs-kosokusen-mails', label: '高速船のメール2通（予約番号案内＋決済確認・要スクショ）' },
       { id: 'docs-hotel', label: '宿の予約確認（3泊）' },
-      { id: 'docs-boat', label: '高千穂峡ボートの予約' },
+      { id: 'docs-studentid', label: '学生証／身分証 ― 全員分（たけすぎの学割プラン）' },
       { id: 'docs-cash', label: '現金（屋久島はカード不可の店も多い）' },
     ],
   },
