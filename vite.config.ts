@@ -6,6 +6,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 // base は Vercel（ルートドメイン配信）向けに '/' を指定。
 export default defineConfig({
   base: '/',
+  // 開発ポートは brain の life/dev-ports.md が正本。このリポの割り当ては 3170 番台。
+  // strictPort を外すと Vite が黙って隣の番号へ逃げ、割り当て表が嘘になる。
+  // 埋まっていたら落として原因を調べる（隣へずらさない）。
+  server: { port: 3170, strictPort: true },
+  preview: { port: 3171, strictPort: true },
   plugins: [
     react(),
     tailwindcss(),

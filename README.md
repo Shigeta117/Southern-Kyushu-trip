@@ -28,10 +28,14 @@
 
 ```bash
 npm install
-npm run dev        # 開発サーバー
+npm run dev        # 開発サーバー → http://localhost:3170
 npm run build      # 型チェック + 本番ビルド（dist/ に出力）
-npm run preview    # 本番ビルドをローカル確認
+npm run preview    # 本番ビルドをローカル確認 → http://localhost:3171
 ```
+
+> **dev は 3170 / preview は 3171。** ポートの割り当て正本は brain の `life/dev-ports.md`。
+> `strictPort: true` を付けてあるので、埋まっていたら隣へ逃げずに落ちる。
+> その場合は他プロジェクトが 3170 番台を掴んでいないか調べること（勝手に kill しない）。
 
 旅程の内容は `src/data/` を編集するだけで更新できます（UIコンポーネントは触らなくてOK）。
 
