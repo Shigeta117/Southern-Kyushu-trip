@@ -18,22 +18,22 @@ export const originPlans: OriginPlan[] = [
     label: '大阪・京都（2名）',
     transport: {
       item: '航空券（オープンジョー）',
-      amount: '30,000〜50,000円',
-      note: '伊丹→熊本（確保済み） ／ 屋久島→鹿児島→羽田',
-      confidence: 'medium',
+      amount: '43,790円',
+      note: '伊丹→熊本 10,120円（ANA・セール）＋ 屋久島→鹿児島→羽田 33,670円（JAL セイバー乗継）。どちらも確定',
+      confidence: 'high',
     },
-    total: '約 96,000〜116,000円',
+    total: '約 110,000円',
   },
   {
     id: 'kanto',
     label: '関東（1名）',
     transport: {
       item: '往復航空券（乗継）',
-      amount: '35,000〜55,000円',
-      note: '羽田→熊本 ／ 屋久島→鹿児島→羽田',
+      amount: '約 50,000〜60,000円',
+      note: '羽田→熊本（金額未確認）＋ 屋久島→鹿児島→羽田 33,670円（JAL セイバー乗継・確定）',
       confidence: 'medium',
     },
-    total: '約 101,000〜121,000円',
+    total: '約 116,000〜126,000円',
   },
 ]
 
