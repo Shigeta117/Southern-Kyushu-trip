@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { stays } from '../data/lodging'
+import { stays, yakushimaBackupTels } from '../data/lodging'
 import type { Stay } from '../data/types'
 import { SectionHeading } from './SectionHeading'
 import { Icon } from './Icon'
@@ -94,11 +94,10 @@ function StayCard({ stay }: { stay: Stay }) {
 
 export function Lodging() {
   const confirmed = stays.filter((s) => s.status === 'confirmed')
-  const backups = stays.filter((s) => s.status === 'backup')
 
   return (
     <section id="lodging" className="section-anchor">
-      <SectionHeading icon="moon" title="宿と連絡先" sub="3泊すべて確定済み。屋久島の予備は下に" />
+      <SectionHeading icon="moon" title="宿と連絡先" sub="3泊すべて確定済み" />
 
       <div className="space-y-3">
         {confirmed.map((s) => (
@@ -106,22 +105,23 @@ export function Lodging() {
         ))}
       </div>
 
-      <div className="mt-6">
-        <div className="flex items-center gap-2 mb-2.5">
-          <Icon name="shield" className="w-4 h-4 text-slate-500 shrink-0" />
-          <h3 className="font-display text-slate-700 text-[0.9375rem]">屋久島の予備（万一のとき）</h3>
-          <span className="flex-1 h-px bg-slate-200" aria-hidden="true" />
-        </div>
-        <p className="text-xs text-slate-500 mb-3 leading-relaxed">
-          8/25 の宿が使えなくなった場合（日程がずれた・トラブル）に当たる順。
-          屋久島の民宿はネットで満室でも電話すると空いていることが多い。
+      <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+        <p className="text-xs text-slate-500 leading-relaxed">
+          万一 8/25 の宿が使えなくなったとき（宮之浦の予備）
         </p>
-        <div className="space-y-3">
-          {backups.map((s) => (
-            <StayCard key={s.id} stay={s} />
+        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5">
+          {yakushimaBackupTels.map((b) => (
+            <span key={b.tel} className="text-sm text-slate-700">
+              {b.name}{' '}
+              <a href={`tel:${b.tel.replace(/-/g, '')}`} className="tabular font-bold text-brand-700 underline underline-offset-2">
+                {b.tel}
+              </a>
+              {b.note && <span className="text-xs text-slate-500">（{b.note}）</span>}
+            </span>
           ))}
         </div>
       </div>
+
     </section>
   )
 }
