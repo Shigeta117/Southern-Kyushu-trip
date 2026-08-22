@@ -15,7 +15,7 @@ import { BottomNav } from './components/BottomNav'
 import { BackToTop } from './components/BackToTop'
 import { useActiveSection } from './hooks/useActiveSection'
 
-const SECTION_IDS = ['todo', 'lodging', 'itinerary', 'map', 'budget', 'transport', 'packing', 'emergency']
+const SECTION_IDS = ['todo', 'lodging', 'packing', 'itinerary', 'map', 'budget', 'transport', 'emergency']
 
 export default function App() {
   const [openDays, setOpenDays] = useState<Record<DayId, boolean>>({
@@ -53,11 +53,11 @@ export default function App() {
         <Highlights />
         <Todos />
         <Lodging />
+        <Packing />
         <Itinerary openDays={openDays} onToggleDay={toggleDay} />
         <TripMap />
         <Budget />
         <Transport />
-        <Packing />
         <Emergency />
       </main>
 

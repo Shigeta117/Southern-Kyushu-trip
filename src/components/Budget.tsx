@@ -9,7 +9,7 @@ export function Budget() {
 
   return (
     <section id="budget" className="section-anchor">
-      <SectionHeading icon="wallet" title="費用の目安" sub="1人あたり・3名割り・現地費用は約68,000円" />
+      <SectionHeading icon="wallet" title="費用の目安" sub="1人あたり・3名割り・現地費用は約66,000円" />
 
       <div className="grid grid-cols-2 gap-2 mb-4">
         {originPlans.map((o) => (

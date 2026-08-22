@@ -106,21 +106,6 @@ export const transportCards: TransportCard[] = [
       { label: '運航状況', url: 'https://www.city.kagoshima.lg.jp/sakurajima-ferry/unko_jokyo/unkojyokyo.html' },
     ],
   },
-  {
-    id: 'takachiho-boat',
-    icon: 'waves',
-    title: '高千穂峡（8/23）― ボートはなし',
-    lead: '貸しボートは 8/9 の予約開始に張ったが確保できず。遊歩道から回る。',
-    rows: [
-      { label: '結果', value: '8/9(日) 9:00 の予約開始で取れず。ネット限定・電話もキャンセル待ちも不可だったため打ち手なし' },
-      { label: '副作用', value: '乗船待ちの行列と乗船30分が消える＝D1 のタイムテーブルに余裕が出た' },
-      { label: '真名井の滝', value: '遊歩道側からでも見える。滝見台からの眺めが定番' },
-    ],
-    notes: [
-      'ボートが無くなったことで、この日の「時間的な関所」は宮崎Airbnbのチェックイン締切 21:00 だけになった。',
-    ],
-    links: [{ label: '高千穂峡（観光協会）', url: 'https://takachiho-kanko.info/boat/detail.php' }],
-  },
 ]
 
 export interface AccessPlan {
@@ -134,13 +119,13 @@ export const accessPlans: AccessPlan[] = [
   {
     area: '大阪・京都メンバー（2名）',
     go: '伊丹 9:20 ➡ 熊本 10:30（ANA・確保済み）',
-    back: '屋久島 19:00 ➡ 鹿児島 ➡ 羽田 22:15',
+    back: '屋久島 19:00 ➡ 鹿児島 ➡ 羽田 22:25',
     hint: '帰りは3人まとめて東京へ。関西には戻らない。',
   },
   {
     area: '関東メンバー（せきけん・1名）',
     go: '羽田 ➡ 熊本空港 9:00 頃 着',
-    back: '屋久島 19:00 ➡ 鹿児島 ➡ 羽田 22:15',
+    back: '屋久島 19:00 ➡ 鹿児島 ➡ 羽田 22:25',
     hint: 'Nori たちの 10:30 着より1時間半早い。待つのは本人了承済み。11:00 にレンタカー店で合流する。',
   },
 ]
