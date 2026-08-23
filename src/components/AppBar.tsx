@@ -9,7 +9,7 @@ export function AppBar({ onSelectDay }: { onSelectDay: (id: DayId) => void }) {
     >
       <div className="max-w-3xl mx-auto px-3 h-14 flex items-center gap-2">
         <span className="font-display text-brand-800 text-[0.9375rem] whitespace-nowrap">
-          南九州＆屋久島
+          南九州 縦断
         </span>
         <div className="flex-1 flex gap-1.5 justify-end">
           {days.map((d) => (

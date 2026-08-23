@@ -66,7 +66,7 @@ export default function App() {
         <p className="text-xs text-slate-500">
           料金・時刻・規制は変動します。出発前に各公式で最新情報をご確認ください。
         </p>
-        <p className="font-display text-sm text-slate-600 mt-2">南九州＆屋久島 3泊4日 旅のしおり</p>
+        <p className="font-display text-sm text-slate-600 mt-2">南九州 縦断 3泊4日 旅のしおり</p>
         <p className="tabular text-[11px] text-slate-400 mt-0.5">2026.08.23 — 08.26</p>
       </footer>
 

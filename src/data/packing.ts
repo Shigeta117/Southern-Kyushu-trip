@@ -1,22 +1,8 @@
 import type { PackingGroup } from './types'
 
-// 夏 × 屋久島の雨 を重視した持ち物リスト。
+// 夏の南九州を重視した持ち物リスト。2026-08-24: 屋久島中止でトレッキング章を削除。
 // 各アイテムの id は localStorage 保存キー。並び替え・追加してもチェック状態がズレないよう固定値にする。
 export const packingGroups: PackingGroup[] = [
-  {
-    id: 'trek',
-    title: '屋久島トレッキング（必携）',
-    icon: 'tree-pine',
-    items: [
-      { id: 'trek-rainwear', label: '登山用レインウェア 上下（透湿防水・傘は森で使えない）' },
-      { id: 'trek-packcover', label: '防水ザック / ザックカバー' },
-      { id: 'trek-shoes', label: 'トレッキングシューズ（防水）' },
-      { id: 'trek-baselayer', label: '速乾インナー＋ミドルレイヤー' },
-      { id: 'trek-clothes', label: '着替え一式（防水袋・ジップロックで二重防水）' },
-      { id: 'trek-food', label: '飲み物・行動食' },
-      { id: 'trek-towel', label: 'タオル / 帰りの乾いた着替え（車に常備）' },
-    ],
-  },
   {
     id: 'summer',
     title: '夏の南九州 暑さ・日差し対策',
@@ -46,11 +32,11 @@ export const packingGroups: PackingGroup[] = [
     icon: 'ticket',
     items: [
       { id: 'docs-license', label: '運転免許証' },
-      { id: 'docs-rentacar', label: 'レンタカー予約確認（①九州本土 / ②屋久島）' },
+      { id: 'docs-rentacar', label: 'レンタカー予約確認（九州本土・延長の可否）' },
       { id: 'docs-kosokusen-mails', label: '高速船のメール2通（予約番号案内＋決済確認・要スクショ）' },
       { id: 'docs-hotel', label: '宿の予約確認（3泊）' },
-      { id: 'docs-studentid', label: '学生証／身分証 ― 全員分（たけすぎの学割プラン）' },
-      { id: 'docs-cash', label: '現金（屋久島はカード不可の店も多い）' },
+      { id: 'docs-studentid', label: '学生証／身分証 ― 全員分（新幹線やフェリーの学割に使える）' },
+      { id: 'docs-cash', label: '現金（桜島の売店や小さな店はカード不可のことがある）' },
     ],
   },
   {

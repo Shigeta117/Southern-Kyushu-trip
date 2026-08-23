@@ -131,7 +131,7 @@ export interface Hospital {
   note: string
 }
 
-/** 宿の連絡先。3泊分の確定宿と、屋久島の予備リストを同じ型で持つ */
+/** 宿の連絡先。3泊分をこの型で持つ（status で確定/予備を分ける） */
 export interface Stay {
   id: string
   /** 'D1' などの日ラベル。予備宿は undefined */

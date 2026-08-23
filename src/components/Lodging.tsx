@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { stays, yakushimaBackupTels } from '../data/lodging'
+import { stays } from '../data/lodging'
 import type { Stay } from '../data/types'
 import { SectionHeading } from './SectionHeading'
 import { Icon } from './Icon'
@@ -97,29 +97,12 @@ export function Lodging() {
 
   return (
     <section id="lodging" className="section-anchor">
-      <SectionHeading icon="moon" title="宿と連絡先" sub="3泊すべて確定済み" />
+      <SectionHeading icon="moon" title="宿と連絡先" sub="8/25 の宿は未手配" />
 
       <div className="space-y-3">
         {confirmed.map((s) => (
           <StayCard key={s.id} stay={s} />
         ))}
-      </div>
-
-      <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-        <p className="text-xs text-slate-500 leading-relaxed">
-          万一 8/25 の宿が使えなくなったとき（宮之浦の予備）
-        </p>
-        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5">
-          {yakushimaBackupTels.map((b) => (
-            <span key={b.tel} className="text-sm text-slate-700">
-              {b.name}{' '}
-              <a href={`tel:${b.tel.replace(/-/g, '')}`} className="tabular font-bold text-brand-700 underline underline-offset-2">
-                {b.tel}
-              </a>
-              {b.note && <span className="text-xs text-slate-500">（{b.note}）</span>}
-            </span>
-          ))}
-        </div>
       </div>
 
     </section>

@@ -54,7 +54,7 @@ export function Transport() {
           <h3 className="font-display text-slate-900">各地からのアクセス</h3>
         </div>
         <p className="tabular text-xs text-slate-500 mb-3">
-          集合：8/23 10:30 熊本空港 ／ 解散：8/26 19:00 屋久島空港発
+          集合：8/23 11:00 熊本空港 ／ 解散：8/26 19:20 阿蘇くまもと空港発（成田行き）
         </p>
         <div className="space-y-3">
           {accessPlans.map((a) => (

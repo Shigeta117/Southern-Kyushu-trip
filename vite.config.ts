@@ -18,7 +18,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: '南九州＆屋久島 3泊4日 旅のしおり',
+        name: '南九州 縦断 3泊4日 旅のしおり',
         short_name: '旅のしおり',
         description: '熊本・阿蘇・高千穂・宮崎・霧島・桜島・鹿児島・屋久島をめぐる2026/8/23-26 3泊4日のモバイル旅のしおり',
         lang: 'ja',

@@ -2,8 +2,9 @@ import type { MapPoint, RouteSegment } from './types'
 import { dayColors } from './trip'
 
 // 地図用のウェイポイント（マーカー）。order はマーカー番号。
+// 2026-08-23 夜に屋久島行きを中止したため、D3・D4 を桜島／熊本に差し替えた。
 export const mapPoints: MapPoint[] = [
-  // Day 1 — 8/23(日) 熊本 → 阿蘇 → 高千穂 → 宮崎
+  // Day 1 — 8/23(日) 熊本 → 阿蘇 → 高千穂 → 宮崎【実績】
   { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 1, order: 1, kind: 'start' },
   { name: '熊本県庁（ルフィ像）', coord: { lat: 32.7904, lng: 130.7422 }, day: 1, order: 2 },
   { name: 'いまきん食堂（内牧）', coord: { lat: 32.947, lng: 131.08 }, day: 1, order: 3 },
@@ -12,27 +13,19 @@ export const mapPoints: MapPoint[] = [
   { name: 'フランキー像（高森駅）', coord: { lat: 32.8193, lng: 131.1225 }, day: 1, order: 6 },
   { name: '高千穂峡', coord: { lat: 32.7018, lng: 131.3009 }, day: 1, order: 7 },
   { name: '宮崎・赤江（泊）', coord: { lat: 31.8781, lng: 131.4322 }, day: 1, order: 8, kind: 'stay' },
-  // Day 2 — 8/24(月) 宮崎 → 霧島 → 桜島 → 鹿児島
+  // Day 2 — 8/24(月) 宮崎 → えびの高原 → 霧島 → 鹿児島
   { name: 'えびの高原', coord: { lat: 31.9446, lng: 130.853 }, day: 2, order: 9 },
   { name: '霧島神宮', coord: { lat: 31.8589, lng: 130.8722 }, day: 2, order: 10 },
-  { name: '有村溶岩展望所', coord: { lat: 31.5567, lng: 130.6781 }, day: 2, order: 11 },
-  { name: '湯之平展望所', coord: { lat: 31.5915, lng: 130.63 }, day: 2, order: 12 },
-  { name: '桜島港', coord: { lat: 31.5797, lng: 130.6097 }, day: 2, order: 13 },
-  { name: '鹿児島・小川町（泊）', coord: { lat: 31.5962, lng: 130.5602 }, day: 2, order: 14, kind: 'stay' },
-  // Day 3 — 8/25(火) 鹿児島 → 屋久島
-  { name: '鹿児島本港 南ふ頭（高速船）', coord: { lat: 31.587, lng: 130.5705 }, day: 3, order: 15 },
-  { name: '屋久島 宮之浦港', coord: { lat: 30.4295, lng: 130.5748 }, day: 3, order: 16 },
-  { name: '白谷雲水峡', coord: { lat: 30.3806, lng: 130.575 }, day: 3, order: 17 },
-  { name: '宮之浦（泊）', coord: { lat: 30.4295, lng: 130.5748 }, day: 3, order: 18, kind: 'stay' },
-  // Day 4 — 8/26(水) 屋久島一周 → 帰路
-  { name: '永田いなか浜', coord: { lat: 30.4096, lng: 130.4354 }, day: 4, order: 19 },
-  { name: '西部林道', coord: { lat: 30.353, lng: 130.417 }, day: 4, order: 20 },
-  { name: '大川の滝', coord: { lat: 30.2996, lng: 130.4135 }, day: 4, order: 21 },
-  { name: '中間ガジュマル', coord: { lat: 30.256, lng: 130.4327 }, day: 4, order: 22 },
-  { name: '尾之間温泉', coord: { lat: 30.2404, lng: 130.5487 }, day: 4, order: 23 },
-  { name: '千尋の滝', coord: { lat: 30.2626, lng: 130.5819 }, day: 4, order: 24 },
-  { name: 'ヤクスギランド', coord: { lat: 30.3048, lng: 130.5754 }, day: 4, order: 25 },
-  { name: '屋久島空港', coord: { lat: 30.3856, lng: 130.6589 }, day: 4, order: 26, kind: 'goal' },
+  { name: '鹿児島・小川町（泊）', coord: { lat: 31.5962, lng: 130.5602 }, day: 2, order: 11, kind: 'stay' },
+  // Day 3 — 8/25(火) 桜島 → 鹿児島（屋久島から差し替え）
+  { name: '桜島港', coord: { lat: 31.5797, lng: 130.6097 }, day: 3, order: 12 },
+  { name: '湯之平展望所', coord: { lat: 31.5915, lng: 130.63 }, day: 3, order: 13 },
+  { name: '有村溶岩展望所', coord: { lat: 31.5567, lng: 130.6781 }, day: 3, order: 14 },
+  { name: '黒神埋没鳥居', coord: { lat: 31.5846, lng: 130.7062 }, day: 3, order: 15 },
+  { name: '8/25 の宿【未定】', coord: { lat: 31.5962, lng: 130.5602 }, day: 3, order: 16, kind: 'stay' },
+  // Day 4 — 8/26(水) 熊本へ北上 → 成田
+  { name: '熊本城', coord: { lat: 32.8061, lng: 130.7059 }, day: 4, order: 17 },
+  { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 4, order: 18, kind: 'goal' },
 ]
 
 // ルート（線）。ferry/boat は破線で表現。
@@ -46,8 +39,9 @@ export const routeSegments: RouteSegment[] = [
       { lat: 32.7904, lng: 130.7422 },
       { lat: 32.947, lng: 131.08 },
       { lat: 32.9709, lng: 131.1078 },
-      { lat: 32.8829, lng: 131.056 },
-      { lat: 32.715, lng: 131.3034 },
+      { lat: 32.937, lng: 131.0809 },
+      { lat: 32.8193, lng: 131.1225 },
+      { lat: 32.7018, lng: 131.3009 },
       { lat: 31.8781, lng: 131.4322 },
     ],
   },
@@ -59,28 +53,16 @@ export const routeSegments: RouteSegment[] = [
       { lat: 31.8781, lng: 131.4322 },
       { lat: 31.9446, lng: 130.853 },
       { lat: 31.8589, lng: 130.8722 },
-      { lat: 31.5567, lng: 130.6781 },
-      { lat: 31.5972, lng: 130.6378 },
-      { lat: 31.5797, lng: 130.6097 },
-    ],
-  },
-  {
-    day: 2,
-    mode: 'ferry',
-    color: dayColors.d2,
-    coords: [
-      { lat: 31.5797, lng: 130.6097 },
       { lat: 31.5962, lng: 130.5602 },
     ],
   },
   {
     day: 3,
-    mode: 'boat',
+    mode: 'ferry',
     color: dayColors.d3,
     coords: [
-      { lat: 31.587, lng: 130.5705 },
-      { lat: 30.9, lng: 130.57 },
-      { lat: 30.4295, lng: 130.5748 },
+      { lat: 31.599, lng: 130.568 },
+      { lat: 31.5797, lng: 130.6097 },
     ],
   },
   {
@@ -88,9 +70,11 @@ export const routeSegments: RouteSegment[] = [
     mode: 'drive',
     color: dayColors.d3,
     coords: [
-      { lat: 30.4295, lng: 130.5748 },
-      { lat: 30.3806, lng: 130.575 },
-      { lat: 30.4295, lng: 130.5748 },
+      { lat: 31.5797, lng: 130.6097 },
+      { lat: 31.5915, lng: 130.63 },
+      { lat: 31.5846, lng: 130.7062 },
+      { lat: 31.5567, lng: 130.6781 },
+      { lat: 31.5797, lng: 130.6097 },
     ],
   },
   {
@@ -98,15 +82,9 @@ export const routeSegments: RouteSegment[] = [
     mode: 'drive',
     color: dayColors.d4,
     coords: [
-      { lat: 30.4295, lng: 130.5748 },
-      { lat: 30.3833, lng: 130.417 },
-      { lat: 30.353, lng: 130.417 },
-      { lat: 30.2996, lng: 130.4135 },
-      { lat: 30.256, lng: 130.4327 },
-      { lat: 30.2404, lng: 130.5487 },
-      { lat: 30.2725, lng: 130.555 },
-      { lat: 30.2939, lng: 130.5814 },
-      { lat: 30.3856, lng: 130.6589 },
+      { lat: 31.5962, lng: 130.5602 },
+      { lat: 32.8061, lng: 130.7059 },
+      { lat: 32.8373, lng: 130.8551 },
     ],
   },
 ]

@@ -6,7 +6,7 @@ import { Icon } from './Icon'
 export function Emergency() {
   return (
     <section id="emergency" className="section-anchor">
-      <SectionHeading icon="shield" title="緊急・実用情報" sub="夏の南九州＆屋久島で気をつけること" />
+      <SectionHeading icon="shield" title="緊急・実用情報" sub="夏の南九州で気をつけること" />
 
       <div className="grid grid-cols-3 gap-2 mb-4">
         {emergencyNumbers.map((n) => (
