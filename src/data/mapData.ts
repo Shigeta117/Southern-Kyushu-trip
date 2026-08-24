@@ -7,7 +7,7 @@ export const mapPoints: MapPoint[] = [
   // Day 1 — 8/23(日) 熊本 → 阿蘇 → 高千穂 → 宮崎【実績】
   { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 1, order: 1, kind: 'start' },
   { name: '熊本県庁（ルフィ像）', coord: { lat: 32.7904, lng: 130.7422 }, day: 1, order: 2 },
-  { name: 'いまきん食堂（内牧）', coord: { lat: 32.947, lng: 131.08 }, day: 1, order: 3 },
+  { name: 'いまきん食堂（内牧）', coord: { lat: 32.967316, lng: 131.051086 }, day: 1, order: 3 },
   { name: '大観峰', coord: { lat: 32.9709, lng: 131.1078 }, day: 1, order: 4 },
   { name: 'ウソップ像（阿蘇駅前）', coord: { lat: 32.937, lng: 131.0809 }, day: 1, order: 5 },
   { name: 'フランキー像（高森駅）', coord: { lat: 32.8193, lng: 131.1225 }, day: 1, order: 6 },
@@ -22,7 +22,7 @@ export const mapPoints: MapPoint[] = [
   { name: '湯之平展望所', coord: { lat: 31.5915, lng: 130.63 }, day: 3, order: 13 },
   { name: '有村溶岩展望所', coord: { lat: 31.5567, lng: 130.6781 }, day: 3, order: 14 },
   { name: '黒神埋没鳥居', coord: { lat: 31.5846, lng: 130.7062 }, day: 3, order: 15 },
-  { name: '熊本城', coord: { lat: 32.8061, lng: 130.7059 }, day: 3, order: 16 },
+  { name: '熊本城', coord: { lat: 32.805269, lng: 130.705464 }, day: 3, order: 16 },
   { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 3, order: 17, kind: 'goal' },
 ]
 
@@ -35,7 +35,7 @@ export const routeSegments: RouteSegment[] = [
     coords: [
       { lat: 32.8373, lng: 130.8551 },
       { lat: 32.7904, lng: 130.7422 },
-      { lat: 32.947, lng: 131.08 },
+      { lat: 32.967316, lng: 131.051086 },
       { lat: 32.9709, lng: 131.1078 },
       { lat: 32.937, lng: 131.0809 },
       { lat: 32.8193, lng: 131.1225 },
@@ -81,7 +81,7 @@ export const routeSegments: RouteSegment[] = [
     color: dayColors.d3,
     coords: [
       { lat: 31.599, lng: 130.568 },
-      { lat: 32.8061, lng: 130.7059 },
+      { lat: 32.805269, lng: 130.705464 },
       { lat: 32.8373, lng: 130.8551 },
     ],
   },
