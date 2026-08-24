@@ -97,7 +97,7 @@ export function Lodging() {
 
   return (
     <section id="lodging" className="section-anchor">
-      <SectionHeading icon="moon" title="宿と連絡先" sub="8/25 の宿は未手配" />
+      <SectionHeading icon="moon" title="宿と連絡先" sub="2泊とも確定" />
 
       <div className="space-y-3">
         {confirmed.map((s) => (

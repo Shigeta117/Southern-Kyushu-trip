@@ -17,15 +17,13 @@ export const mapPoints: MapPoint[] = [
   { name: 'えびの高原', coord: { lat: 31.9446, lng: 130.853 }, day: 2, order: 9 },
   { name: '霧島神宮', coord: { lat: 31.8589, lng: 130.8722 }, day: 2, order: 10 },
   { name: '鹿児島・小川町（泊）', coord: { lat: 31.5962, lng: 130.5602 }, day: 2, order: 11, kind: 'stay' },
-  // Day 3 — 8/25(火) 桜島 → 鹿児島（屋久島から差し替え）
+  // Day 3 — 8/25(火) 桜島 → 熊本 → 成田【最終日】
   { name: '桜島港', coord: { lat: 31.5797, lng: 130.6097 }, day: 3, order: 12 },
   { name: '湯之平展望所', coord: { lat: 31.5915, lng: 130.63 }, day: 3, order: 13 },
   { name: '有村溶岩展望所', coord: { lat: 31.5567, lng: 130.6781 }, day: 3, order: 14 },
   { name: '黒神埋没鳥居', coord: { lat: 31.5846, lng: 130.7062 }, day: 3, order: 15 },
-  { name: '8/25 の宿【未定】', coord: { lat: 31.5962, lng: 130.5602 }, day: 3, order: 16, kind: 'stay' },
-  // Day 4 — 8/26(水) 熊本へ北上 → 成田
-  { name: '熊本城', coord: { lat: 32.8061, lng: 130.7059 }, day: 4, order: 17 },
-  { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 4, order: 18, kind: 'goal' },
+  { name: '熊本城', coord: { lat: 32.8061, lng: 130.7059 }, day: 3, order: 16 },
+  { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 3, order: 17, kind: 'goal' },
 ]
 
 // ルート（線）。ferry/boat は破線で表現。
@@ -78,11 +76,11 @@ export const routeSegments: RouteSegment[] = [
     ],
   },
   {
-    day: 4,
+    day: 3,
     mode: 'drive',
-    color: dayColors.d4,
+    color: dayColors.d3,
     coords: [
-      { lat: 31.5962, lng: 130.5602 },
+      { lat: 31.599, lng: 130.568 },
       { lat: 32.8061, lng: 130.7059 },
       { lat: 32.8373, lng: 130.8551 },
     ],
