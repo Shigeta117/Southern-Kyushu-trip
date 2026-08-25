@@ -23,7 +23,8 @@ export const mapPoints: MapPoint[] = [
   { name: '有村溶岩展望所', coord: { lat: 31.5567, lng: 130.6781 }, day: 3, order: 14 },
   { name: '黒神埋没鳥居', coord: { lat: 31.5846, lng: 130.7062 }, day: 3, order: 15 },
   { name: '道の駅たるみず湯っ足り館', coord: { lat: 31.5587609, lng: 130.7450308 }, day: 3, order: 16 },
-  { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 3, order: 17, kind: 'goal' },
+  { name: '熊本城（二の丸広場）', coord: { lat: 32.8075523, lng: 130.7014795 }, day: 3, order: 17 },
+  { name: '阿蘇くまもと空港', coord: { lat: 32.8373, lng: 130.8551 }, day: 3, order: 18, kind: 'goal' },
 ]
 
 // ルート（線）。ferry/boat は破線で表現。
@@ -82,6 +83,7 @@ export const routeSegments: RouteSegment[] = [
     coords: [
       { lat: 31.5846, lng: 130.7062 },
       { lat: 31.5587609, lng: 130.7450308 },
+      { lat: 32.8075523, lng: 130.7014795 },
       { lat: 32.8373, lng: 130.8551 },
     ],
   },
